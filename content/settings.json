@@ -1,15 +1,14 @@
 {
-  "store_id": 1052,
-  "name": "My Shop",
-  "domain": "ecomplus-storefront.netlify.app",
-  "short_name": "My Shop",
-  "description": "My PWA Shop",
-  "primary_color": "#222831",
-  "secondary_color": "#393e46",
-  "bg_color": "#ffffff",
+  "store_id": 1131,
+  "name": "loja-customic",
+  "domain": "loja-customic.netlify.app",
+  "short_name": "customic",
+  "description": "loja-customic",
+  "primary_color": "#fa7d75",
+  "secondary_color": "#333232",
+  "bg_color": "#fff",
   "theme": {
-    "bootswatch": "_",
-    "custom": "_"
+    "bootswatch": "_"
   },
   "logo": "/img/uploads/logo.png",
   "mini_logo": "",
