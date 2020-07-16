@@ -1,0 +1,70 @@
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'content/**'
+      - 'template/**'
+      - 'package-lock.json'
+      - '.ecomplus.cd.json'
+
+jobs:
+  build-and-deploy:
+    name: Storefront build and deploy
+    runs-on: ubuntu-latest
+    if: |
+      github.event.head_commit.message != 'Initial commit' &&
+      !contains(github.event.head_commit.message, '[skip ci]')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci --only=production
+
+      - name: Run build
+        run: npm run build
+
+      - name: Deploy to branch dist
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: dist
+          FOLDER: dist
+          CLEAN: true
+
+      - name: Config Git and check diff
+        run: |
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Action'
+          git add content template
+          (git diff-index --quiet HEAD && echo "::set-output name=diff::0") || echo "::set-output name=diff::1"
+        id: git_diff
+
+      - name: Commit local file changes
+        if: steps.git_diff.outputs.diff == 1
+        run: |
+          git commit -m 'chore: update template default content [skip ci]'
+
+      - name: Push changes
+        if: steps.git_diff.outputs.diff == 1
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
