@@ -1,22 +1,23 @@
 {
-  "store_id": 1131,
-  "name": "loja-customic",
   "domain": "loja-customic.netlify.app",
-  "short_name": "customic",
-  "description": "loja-customic",
-  "primary_color": "#fa7d75",
-  "secondary_color": "#333232",
-  "bg_color": "#fff",
+  "currency_symbol": "R$",
+  "primary_color": "#2b2938",
   "theme": {
-    "bootswatch": "_"
+    "bootswatch": "_",
+    "custom": "_"
   },
-  "logo": "/img/uploads/logo.png",
-  "mini_logo": "",
-  "icon": "/img/icon.png",
-  "large_icon": "/img/large-icon.png",
-  "favicon": "/img/uploads/favicon.png",
+  "bg_color": "#fff",
+  "logo": "/img/uploads/minilogo.png",
+  "name": "loja-customic",
+  "short_name": "Customic",
   "lang": "pt_br",
   "currency": "BRL",
-  "currency_symbol": "R$",
-  "country_code": "BR"
+  "mini_logo": "",
+  "favicon": "/img/uploads/favicon_customic.png",
+  "country_code": "BR",
+  "secondary_color": "#fbfbfb",
+  "icon": "/img/uploads/minilogo.png",
+  "store_id": 1131,
+  "description": "loja-customic",
+  "large_icon": "/img/uploads/minilogo.png"
 }
