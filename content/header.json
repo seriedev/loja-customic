@@ -6,8 +6,16 @@
   "contacts_stripe": {
     "pages": [
       {
-        "title": "atendimento@customic.com.br",
-        "link": "atendimento@customic.com.br"
+        "title": "Atendimento",
+        "link": "/contato"
+      },
+      {
+        "title": "Checkout",
+        "link": "/carrinho"
+      },
+      {
+        "title": "Meus Favoritos",
+        "link": "/favoritos"
       }
     ],
     "phone_wpp": true,
