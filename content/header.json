@@ -1,25 +1,27 @@
 {
   "marketing_stripe": {
-    "text": "Aproveite nossos descontos de até 40%!",
-    "link": "/promotion"
+    "text": "",
+    "link": ""
   },
   "contacts_stripe": {
     "pages": [
       {
-        "title": "Sobre nós",
-        "link": "/pages/sobre-nos"
-      },
-      {
-        "title": "Esta loja é um PWA",
-        "link": "/posts/esta-loja-e-um-pwa"
+        "title": "atendimento@customic.com.br",
+        "link": "atendimento@customic.com.br"
       }
     ],
     "phone_wpp": true,
     "socials": true
   },
   "categories_list": {
-    "featured": [],
-    "random": 6,
+    "featured": [
+      "/dispositivos?Aparelhos",
+      "/colecoes?Coleções",
+      "/u_10009?Películas",
+      "/acessorios?Acessórios",
+      "/personalize?Personalize"
+    ],
+    "random": 0,
     "full_width": false
   },
   "search_input": true
