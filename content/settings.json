@@ -1,12 +1,12 @@
 {
   "domain": "loja-customic.netlify.app",
   "currency_symbol": "R$",
-  "primary_color": "#fbfbfb",
+  "primary_color": "#2b2938",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
   },
-  "bg_color": "#fff",
+  "bg_color": "#2b2938",
   "logo": "/img/uploads/minilogo.png",
   "name": "CUSTOMIC",
   "short_name": "Customic",
