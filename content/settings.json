@@ -8,7 +8,7 @@
   },
   "bg_color": "#2b2938",
   "logo": "/img/uploads/minilogo.png",
-  "name": "CUSTOMIC",
+  "name": "CUSTOMIC 1",
   "short_name": "Pulz Comércio de Importados Eireli",
   "lang": "pt_br",
   "currency": "BRL",
@@ -18,6 +18,6 @@
   "secondary_color": "#2b2938",
   "icon": "/img/uploads/minilogo.png",
   "store_id": 1131,
-  "description": "CUSTOMIC",
+  "description": "CUSTOMIC 2",
   "large_icon": "/img/uploads/minilogo.png"
 }
