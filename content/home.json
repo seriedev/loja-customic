@@ -51,6 +51,15 @@
       "headless": false,
       "title": "Capas +   ",
       "link": "/grid/capas-customic-destaques"
+    },
+    {
+      "type": "page-title",
+      "title": "Veja mais em nosso instagram:"
+    },
+    {
+      "type": "responsive-banner",
+      "img": "/img/uploads/banner-instagram-v1.png",
+      "link": "https://www.instagram.com/customic/"
     }
   ]
 }
