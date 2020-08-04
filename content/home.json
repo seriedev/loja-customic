@@ -41,6 +41,36 @@
       ]
     },
     {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/banner-produtoscapas1.png",
+          "link": "/todasascasesdeiphone/",
+          "alt": "Capa Iphone"
+        },
+        {
+          "img": "/img/uploads/banner-produtos-android2.png",
+          "link": "/todos-modelos-de-android/",
+          "alt": "Capa Android"
+        }
+      ]
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/banner-produtos-ipad3.png",
+          "link": "/ipad-e-macbook/",
+          "alt": "Capa Ipad"
+        },
+        {
+          "img": "/img/uploads/banner-produtos-peliculas4.png",
+          "link": "/peliculas/",
+          "alt": "Película de proteção para celular"
+        }
+      ]
+    },
+    {
       "type": "info-bar",
       "enabled": true
     },
