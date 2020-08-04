@@ -9,9 +9,30 @@
     "list": []
   },
   "links_2": {
-    "list_categories": false,
+    "list_categories": true,
     "title": "",
-    "list": []
+    "list": [
+      {
+        "text": "Aparelhos",
+        "url": "/dispositivos/"
+      },
+      {
+        "text": "Coleções",
+        "url": "/colecoes/"
+      },
+      {
+        "text": "Películas",
+        "url": "/peliculas/"
+      },
+      {
+        "text": "Acessórios",
+        "url": "/acessorios/"
+      },
+      {
+        "text": "Personalize",
+        "url": "/design_lab/application_upload.php"
+      }
+    ]
   },
   "contacts": {
     "title": "CONTATO",
@@ -20,7 +41,9 @@
     "email": true,
     "address": true
   },
-  "stamps": [],
+  "stamps": [
+    {}
+  ],
   "payment_methods": {
     "bb": false,
     "visa": false,
