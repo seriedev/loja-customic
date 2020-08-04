@@ -1,1 +1,61 @@
 // Add your custom CSS here.
+.footer {
+  &__title, & a, & i, &__credits {
+    color: #fff;
+  }
+  &__social {
+    & .fa {
+      &-facebook, &-instagram {
+        font-size: var(--font-size-lg)
+      }
+    }
+  }
+  background: #2b2938;
+}
+
+@media  screen and (min-width: 1368px) {
+
+}
+
+//desktop normal size
+@media  screen and (min-width: 992px) and (max-width: 1367px) {
+  //slider full
+  .banner-slider {
+    max-width: 100%;
+  }
+}
+// apenas tablet
+@media screen and (min-width: 481px) and (max-width: 991px) {
+
+}
+// apenas mobile
+@media screen and (max-width: 480px) {
+#footer-pages {
+  display: block
+}
+}
+.header__nav a {
+  padding-right: 1rem;
+}
+#product-description .container {
+  max-width: 100%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.collection-shelf .product-card__name, .collection-shelf .product-card__prices, .category-retail .product-card__name, .category-retail .product-card__prices, .page--search .product-card__name, .page--search .product-card__prices {
+  text-align: center;
+}
+#page-pages\/sobre .extra-page .container {
+  max-width: 100% !important;
+  width: 100%
+}
+.variations__grid--modelo option:disabled {
+  display: none;
+}
+.top-bar {
+  & a, & i {
+    color: #fff;
+  }
+}

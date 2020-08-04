@@ -17,7 +17,7 @@ const networksWithColors = [
 <footer class="footer py-3 py-lg-4 py-xl-5">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-auto order-lg-last">
+      <div class="col-12 col-sm-4 order-lg">
         <div class="footer__contacts">
           <% if (footer.contacts.title) { %>
             <div class="footer__title">
@@ -94,17 +94,16 @@ const networksWithColors = [
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-lg">
-        <a
-          class="footer__title"
-          data-toggle="collapse"
-          href="#footer-pages"
-          role="button"
-          aria-expanded="false"
-          aria-controls="footer-pages"
-        >
-          <%= footer.links_1.title || _.dictionary('pages') %>
-        </a>
+      <div class="col-12 col-sm-4 order-lg-last">
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0&appId=167752976907076&autoLogAppEvents=1" nonce="lBQpbJCu"></script>
+<div class="fb-page" data-href="https://www.facebook.com/Customic/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Customic/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Customic/">Customic</a></blockquote></div>
+      </div>
+
+      <div class="col-12 col-sm-4 order-lg-first">
+        <h2 class="footer__title footer__store">
+          <%= footer.description.title || _.settings.name %>
+        </h2>
         <div class="collapse" id="footer-pages">
           <% if (footer.links_1.list_pages) { %>
             <ul class="footer__links">
@@ -131,52 +130,6 @@ const networksWithColors = [
             </ul>
           <% } %>
         </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg">
-        <a
-          class="footer__title"
-          data-toggle="collapse"
-          href="#footer-categories"
-          role="button"
-          aria-expanded="false"
-          aria-controls="footer-categories"
-        >
-          <%= footer.links_2.title || _.dictionary('categories') %>
-        </a>
-        <div class="collapse" id="footer-categories">
-          <% if (footer.links_2.list_categories) { %>
-            <ul class="footer__links">
-              <% _.categories.forEach(({ name, slug, parent }) => { %>
-                <% if (!parent) { %>
-                  <li>
-                    <i class="fas fa-angle-right"></i>
-                    <a href="/<%= slug %>">
-                      <%= name %>
-                    </a>
-                  </li>
-                <% } %>
-              <% }) %>
-            </ul>
-          <% } else { %>
-            <ul class="footer__links">
-              <% footer.links_2.list.forEach(({ url, text }) => { %>
-                <li>
-                  <i class="fas fa-angle-right"></i>
-                  <a href="<%= url %>">
-                    <%= text %>
-                  </a>
-                </li>
-              <% }) %>
-            </ul>
-          <% } %>
-        </div>
-      </div>
-
-      <div class="col-12 col-xl-5 order-lg-first">
-        <h2 class="footer__title footer__store">
-          <%= footer.description.title || _.settings.name %>
-        </h2>
         <p><%- footer.description.text || _.settings.description %></p>
 
         <div class="mt-4 mb-3">
