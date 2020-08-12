@@ -4,9 +4,42 @@
     "text": ""
   },
   "links_1": {
-    "list_pages": true,
-    "title": "CUSTOMIC",
-    "list": []
+    "list_pages": false,
+    "title": "",
+    "list": [
+      {
+        "url": "/pages/sobre",
+        "text": "Sobre a Customic"
+      },
+      {
+        "text": "Condições de Entrega",
+        "url": "/pages/entrega"
+      },
+      {
+        "text": "Trocas e Devoluções",
+        "url": "/pages/trocas"
+      },
+      {
+        "text": "FAQ",
+        "url": "/pages/faq"
+      },
+      {
+        "text": "Formas de Pagamento",
+        "url": "/pages/pagamentos"
+      },
+      {
+        "text": "Política de Privacidade",
+        "url": "/pages/privacidade"
+      },
+      {
+        "text": "Onde nos encontrar",
+        "url": "/pages/sobre"
+      },
+      {
+        "text": "Contato",
+        "url": "/pages/contato"
+      }
+    ]
   },
   "links_2": {
     "list_categories": true,
