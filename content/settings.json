@@ -9,7 +9,7 @@
   "bg_color": "#2b2938",
   "logo": "/img/uploads/minilogo.png",
   "name": "Customic",
-  "short_name": "Pulz Comércio de Importados Eireli",
+  "short_name": "Customic",
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
@@ -18,6 +18,6 @@
   "secondary_color": "#2b2938",
   "icon": "/img/uploads/minilogo.png",
   "store_id": 1131,
-  "description": "Customic: Capa para Celular e Smartphones - Customic Capas Especiais",
+  "description": "Customic: Capas Especiais para Smartphones e Tablets",
   "large_icon": "/img/uploads/minilogo.png"
 }
