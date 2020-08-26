@@ -1,5 +1,5 @@
 {
   "css": ".top-bar {\n  font-size: 85%;\n  background-color: #2b2938;\n #c-5f1f3f40f023684cdbd4a1ba {\ndisplay: none;\n}\n #c-5f1f3f51f023684cdbd4a1de {\ndisplay: none;\n}\n #c-5f1f3f52f023684cdbd4a1e0 {\ndisplay: none;\n}\n #c-5f1f3f53f023684cdbd4a1e2 {\ndisplay: none;\n}",
   "html_head": "",
-  "html_body": "<script>\n  (function (o, c, t, a, d, e, s, k) {\n    o.octadesk = o.octadesk || {};\n    s = c.getElementsByTagName(\"body\")[0];\n    k = c.createElement(\"script\");\n    k.async = 1;\n    k.src = t + '/' + a + '?showButton=' +  d + '&openOnMessage=' + e;\n    s.appendChild(k);\n  })(window, document, 'https://chat.octadesk.services/api/widget', 'customic',  true, true);\n</script>"
+  "html_body": ""
 }
