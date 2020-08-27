@@ -6,7 +6,7 @@
     },
     {
       "type": "product-block",
-      "enabled": false
+      "enabled": true
     },
     {
       "type": "related-products",
