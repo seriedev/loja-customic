@@ -53,7 +53,8 @@
           "start": "",
           "end": "",
           "img": "/img/uploads/banner-siteii-e-compressed5.jpg",
-          "link": "/impactor-flex-all"
+          "link": "/impactor-flex-all",
+          "mobile_img": "/img/uploads/banners-mobile-ii-e.png"
         }
       ]
     },
