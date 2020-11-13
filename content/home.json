@@ -14,6 +14,12 @@
           "mobile_img": "/img/uploads/asset-1_mobile.jpg"
         },
         {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/asset-2.jpg",
+          "mobile_img": "/img/uploads/asset-2_mobile.jpg"
+        },
+        {
           "img": "/img/uploads/banner-siteii-a-compressed1.jpg",
           "mobile_img": "/img/uploads/Banners-Mobile-II-A.png",
           "link": "/pages/sobre",
@@ -48,12 +54,6 @@
           "end": "",
           "img": "/img/uploads/banner-siteii-e-compressed5.jpg",
           "link": "/impactor-flex-all"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/asset-2.jpg",
-          "mobile_img": "/img/uploads/asset-2_mobile.jpg"
         }
       ]
     },
