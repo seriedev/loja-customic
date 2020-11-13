@@ -7,13 +7,6 @@
       "autoplay": 9000,
       "slides": [
         {
-          "start": "2020-11-13T12:32:33.945Z",
-          "end": "2020-11-13T12:32:34.001Z",
-          "img": "/img/uploads/asset-1.png",
-          "link": "https://customic.com.br/impactor-flex-antibacteria-all",
-          "mobile_img": "/img/uploads/asset-1_mobile.png"
-        },
-        {
           "img": "/img/uploads/banner-siteii-a-compressed1.jpg",
           "mobile_img": "/img/uploads/Banners-Mobile-II-A.png",
           "link": "/pages/sobre",
@@ -48,6 +41,13 @@
           "end": "",
           "img": "/img/uploads/banner-siteii-e-compressed5.jpg",
           "link": "/impactor-flex-all"
+        },
+        {
+          "start": "2020-11-13T16:47:06.351Z",
+          "end": "2020-11-13T16:47:06.406Z",
+          "img": "/img/uploads/asset-1.jpg",
+          "link": "https://customic.com.br/impactor-flex-antibacteria-all",
+          "mobile_img": "/img/uploads/asset-1_mobile.jpg"
         }
       ]
     },
