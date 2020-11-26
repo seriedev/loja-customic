@@ -30,7 +30,7 @@ jobs:
         id: remote_repo
 
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
 
@@ -40,19 +40,28 @@ jobs:
           node-version: '12.x'
 
       - name: Cache dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Get ISG state
+        id: isg_state
+        run: |
+          if [ -f .isg ]; then
+            echo "::set-output name=rand::$(cat .isg)";
+          else
+            echo "::set-output name=rand::0";
+          fi
+
       - name: Cache output
         continue-on-error: true
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: .deploy/publish
-          key: ${{ hashFiles('.bundles.json') }}-${{ hashFiles('template/p*/**') }}-${{ hashFiles('content/**') }}
+          key: ${{ hashFiles('.bundles.json') }}-${{ hashFiles('template/p*/**') }}-${{ hashFiles('content/**') }}-${{ steps.isg_state.outputs.rand }}
 
       - name: Install dependencies
         run: npm ci --only=production
@@ -83,18 +92,31 @@ jobs:
           fi
         id: partial_build
 
+      - name: Output ISG state
+        id: new_isg_state
+        env:
+          ISG_ENUM: ${{ steps.partial_build.outputs.isg }}
+        run: |
+          if [ $ISG_ENUM != 0 ] || [ ! -f .isg ]; then
+            ISG_STATE=$RANDOM;
+            echo $ISG_STATE > .isg;
+          else
+            ISG_STATE=$(cat .isg);
+          fi
+          echo "::set-output name=rand::$ISG_STATE";
+
       - name: Config Git and check diff
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
-          git add .bundles.json content template
+          git add .isg .bundles.json content template
           (git diff-index --quiet HEAD && echo "::set-output name=diff::0") || echo "::set-output name=diff::1"
         id: git_diff
 
       - name: Commit local file changes
         if: steps.git_diff.outputs.diff == 1
         run: |
-          git commit -m 'chore: update template defaults and bundles data [skip ci]'
+          git commit -m 'chore(post-build): update template defaults, bundles and isg states [skip ci]'
 
       - name: Push changes
         if: steps.git_diff.outputs.diff == 1
@@ -149,3 +171,11 @@ jobs:
           BRANCH: dist
           FOLDER: .deploy
           CLEAN: true
+
+      - name: Cache output force update
+        if: steps.new_isg_state.outputs.rand != steps.isg_state.outputs.rand
+        continue-on-error: true
+        uses: actions/cache@v2
+        with:
+          path: .deploy/publish
+          key: ${{ hashFiles('.bundles.json') }}-${{ hashFiles('template/p*/**') }}-${{ hashFiles('content/**') }}-${{ steps.new_isg_state.outputs.rand }}
