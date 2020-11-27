@@ -18,6 +18,17 @@
     {
       "type": "document-description",
       "enabled": true
+    },
+    {
+      "type": "banner-slider",
+      "autoplay": 9000,
+      "slides": [
+        {
+          "start": "2020-11-27T01:21:01.968Z",
+          "end": "2020-11-27T01:21:02.011Z",
+          "img": "/img/uploads/banner-4.png"
+        }
+      ]
     }
   ]
 }
