@@ -1,18 +1,6 @@
 {
   "sections": [
     {
-      "type": "banner-slider",
-      "autoplay": 9000,
-      "slides": [
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-4.png",
-          "link": "https://customic.com.br/black-friday-customic"
-        }
-      ]
-    },
-    {
       "type": "breadcrumbs",
       "enabled": true
     },
