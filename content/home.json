@@ -21,16 +21,16 @@
           "mobile_img": "/img/uploads/asset-1_mobile.jpg"
         },
         {
-          "img": "/img/uploads/banner-siteii-a-compressed1.jpg",
-          "mobile_img": "/img/uploads/Banners-Mobile-II-A.png",
+          "img": "/img/uploads/desk-1_easy-resize.com.jpg",
+          "mobile_img": "/img/uploads/mobile-2_easy-resize.com.jpg",
           "link": "/pages/sobre",
           "alt": "banner menino celular",
           "start": "",
           "end": ""
         },
         {
-          "img": "/img/uploads/banner-siteii-b-compressed2.jpg",
-          "mobile_img": "/img/uploads/Banners-Mobile-II-B.png",
+          "img": "/img/uploads/seed-2_easy-resize.com.jpg",
+          "mobile_img": "/img/uploads/seed-mobile-2_easy-resize.com.jpg",
           "alt": "Banner proteja seu planeta",
           "start": "",
           "end": "",
@@ -46,7 +46,7 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-siteii-d-compressed4.jpg",
+          "img": "/img/uploads/mobile-2_easy-resize.com.jpg",
           "mobile_img": "/img/uploads/Banners-Mobile-II-D.png",
           "link": "/seed-eco-case/"
         },
