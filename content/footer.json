@@ -75,7 +75,10 @@
     "address": true
   },
   "stamps": [
-    {}
+    {
+      "link": "https://transparencyreport.google.com/safe-browsing/search?url=customic.com.br",
+      "src": "/img/uploads/google.png"
+    }
   ],
   "payment_methods": {
     "bb": false,
