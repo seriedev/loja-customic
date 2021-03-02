@@ -56,6 +56,13 @@
           "img": "/img/uploads/banner-siteii-e-compressed5.jpg",
           "link": "/impactor-flex-all",
           "mobile_img": "/img/uploads/banners-mobile-ii-e.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "mobile_img": "",
+          "alt": "First_Gif",
+          "img": "http://www.comercial.customic.com.br/news/imagens/banner/gif_teste3.gif"
         }
       ]
     },
