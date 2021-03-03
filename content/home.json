@@ -7,10 +7,15 @@
       "autoplay": 9000,
       "slides": [
         {
+          "end": "",
+          "start": "",
+          "img": "https://apks-pds.s3.amazonaws.com/ezgif.com-gif-maker+(1).webp"
+        },
+        {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banner-desk-pynw.jpg",
-          "mobile_img": "/img/uploads/banner-mobile-pynw.jpg",
+          "img": "/img/uploads/asset-2_ok.jpg",
+          "mobile_img": "/img/uploads/asset-2_mobile.jpg",
           "link": "https://customic.com.br/capas-antibacteria"
         },
         {
@@ -21,20 +26,20 @@
           "mobile_img": "/img/uploads/asset-1_mobile.jpg"
         },
         {
-          "img": "/img/uploads/banner-desk-seed.jpg",
-          "mobile_img": "/img/uploads/banner-mobile-seed.jpg",
-          "link": "/seed-eco-case-antibacteria",
-          "alt": "seed 2021",
+          "img": "/img/uploads/desk-1_easy-resize.com.jpg",
+          "mobile_img": "/img/uploads/mobile-2_easy-resize.com.jpg",
+          "link": "/pages/sobre",
+          "alt": "banner menino celular",
           "start": "",
           "end": ""
         },
         {
-          "img": "/img/uploads/banner-desk-popsockets.jpg",
-          "mobile_img": "/img/uploads/banner-mobile-popsockets.jpg",
-          "alt": "Banner popsockets 2021",
+          "img": "/img/uploads/seed-2_easy-resize.com.jpg",
+          "mobile_img": "/img/uploads/seed-mobile-2_easy-resize.com.jpg",
+          "alt": "Banner proteja seu planeta",
           "start": "",
           "end": "",
-          "link": "/popsockets"
+          "link": "/seed-eco-case-all"
         },
         {
           "start": "",
@@ -46,6 +51,13 @@
         {
           "start": "",
           "end": "",
+          "img": "/img/uploads/banner-siteii-d-compressed4.jpg",
+          "mobile_img": "/img/uploads/Banners-Mobile-II-D.png",
+          "link": "/seed-eco-case/"
+        },
+        {
+          "start": "2021-03-02T19:09:17.107Z",
+          "end": "2021-03-02T19:09:17.183Z",
           "img": "/img/uploads/banner-siteii-e-compressed5.jpg",
           "link": "/impactor-flex-all",
           "mobile_img": "/img/uploads/banners-mobile-ii-e.png"
