@@ -7,16 +7,12 @@
       "autoplay": 9000,
       "slides": [
         {
-          "start": "2021-03-04T13:34:06.369Z",
-          "end": "2021-03-04T13:34:06.413Z",
-          "img": "https://apks-pds.s3.amazonaws.com/ezgif.com-gif-maker+(1).webp"
-        },
-        {
           "start": "",
           "end": "",
-          "img": "/img/uploads/asset-2_ok.jpg",
-          "mobile_img": "/img/uploads/asset-2_mobile.jpg",
-          "link": "https://customic.com.br/capas-antibacteria"
+          "img": "/img/uploads/banner-desk-pynw.jpg",
+          "mobile_img": "/img/uploads/banner-mobile-pynw.jpg",
+          "link": "https://customic.com.br/capas-antibacteria",
+          "alt": "PYNW2021"
         },
         {
           "start": "",
@@ -26,20 +22,20 @@
           "mobile_img": "/img/uploads/asset-1_mobile.jpg"
         },
         {
-          "img": "/img/uploads/desk-1_easy-resize.com.jpg",
-          "mobile_img": "/img/uploads/mobile-2_easy-resize.com.jpg",
-          "link": "/pages/sobre",
-          "alt": "banner menino celular",
+          "img": "/img/uploads/banner-desk-seed.jpg",
+          "mobile_img": "/img/uploads/banner-mobile-seed.jpg",
+          "link": "https://customic.com.br/seed-eco-case-antibacteria",
+          "alt": "SeedAntibac2021",
           "start": "",
           "end": ""
         },
         {
-          "img": "/img/uploads/seed-2_easy-resize.com.jpg",
-          "mobile_img": "/img/uploads/seed-mobile-2_easy-resize.com.jpg",
-          "alt": "Banner proteja seu planeta",
+          "img": "/img/uploads/banner-desk-popsockets.jpg",
+          "mobile_img": "/img/uploads/banner-mobile-popsockets.jpg",
+          "alt": "popsocket2021",
           "start": "",
           "end": "",
-          "link": "/seed-eco-case-all"
+          "link": "/popsockets"
         },
         {
           "start": "",
@@ -47,13 +43,6 @@
           "img": "/img/uploads/banner-siteii-c-compressed3.jpg",
           "mobile_img": "/img/uploads/Banners-Mobile-II-C.png",
           "link": "/impactor-ultra-fabric-all"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-siteii-d-compressed4.jpg",
-          "mobile_img": "/img/uploads/Banners-Mobile-II-D.png",
-          "link": "/seed-eco-case/"
         },
         {
           "start": "2021-03-02T19:09:17.107Z",
