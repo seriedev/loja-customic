@@ -89,8 +89,8 @@
     },
     {
       "type": "collection-shelf",
-      "shuffle": false,
-      "collection_id": null,
+      "shuffle": true,
+      "collection_id": "606c9f9333554a7d2d3cd8a3:collections:Vitrine Customic 2021:/vitrine-customic-2021",
       "headless": false,
       "title": "Capas +   ",
       "link": "/grid/capas-customic-destaques"
