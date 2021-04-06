@@ -89,7 +89,7 @@
     },
     {
       "type": "collection-shelf",
-      "shuffle": true,
+      "shuffle": false,
       "collection_id": null,
       "headless": false,
       "title": "Capas +   ",
