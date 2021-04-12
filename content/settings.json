@@ -7,7 +7,7 @@
     "custom": "_"
   },
   "bg_color": "#2b2938",
-  "logo": "/img/uploads/minilogo.png",
+  "logo": "/img/uploads/logo.png",
   "name": "Customic",
   "short_name": "Customic",
   "lang": "pt_br",
@@ -16,8 +16,8 @@
   "favicon": "/img/uploads/favicon.ico",
   "country_code": "BR",
   "secondary_color": "#2b2938",
-  "icon": "/img/uploads/minilogo.png",
+  "icon": "/img/uploads/logo.png",
   "store_id": 1131,
   "description": "Customic: Capas Especiais para Smartphones e Tablet",
-  "large_icon": "/img/uploads/minilogo.png"
+  "large_icon": "/img/uploads/logo.png"
 }
