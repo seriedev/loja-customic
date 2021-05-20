@@ -19,7 +19,8 @@
           "end": "",
           "img": "/img/uploads/asset-1_ok.jpg",
           "link": "https://customic.com.br/impactor-flex-antibacteria-all",
-          "mobile_img": "/img/uploads/asset-1_mobile.jpg"
+          "mobile_img": "https://i.imgur.com/R1PJGki.png",
+          "alt": "flexantibac2021"
         },
         {
           "img": "/img/uploads/banner-desk-seed.jpg",
