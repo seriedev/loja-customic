@@ -97,12 +97,8 @@
       "link": ""
     },
     {
-      "type": "page-title",
-      "title": "Veja mais em nosso instagram:"
-    },
-    {
       "type": "custom-content",
-      "markdown": "## **[@customic](https://www.instagram.com/customic/)**"
+      "markdown": "## **Veja mais em nosso instagram: [@customic](https://www.instagram.com/customic/)**"
     },
     {
       "type": "responsive-banner",
