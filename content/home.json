@@ -101,6 +101,10 @@
       "title": "Veja mais em nosso instagram:"
     },
     {
+      "type": "custom-content",
+      "markdown": "## **[@customic](https://www.instagram.com/customic/)**"
+    },
+    {
       "type": "responsive-banner",
       "img": "/img/uploads/banner-instagram-v1.png",
       "link": "https://www.instagram.com/customic/"
