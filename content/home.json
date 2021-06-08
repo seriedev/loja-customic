@@ -4,8 +4,23 @@
   "sections": [
     {
       "type": "banner-slider",
-      "autoplay": 4000,
+      "autoplay": 5000,
       "slides": [
+        {
+          "start": "",
+          "end": "",
+          "img": "https://res.cloudinary.com/customic/image/upload/v1623150514/banners2021/1200x466-banner-02_zroj8l.png",
+          "link": "https://www.lab.customic.com.br/",
+          "alt": "valentine'sDay2021",
+          "mobile_img": "https://res.cloudinary.com/customic/image/upload/v1623150514/banners2021/Customic-lab-02_rdls3s.png"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "https://res.cloudinary.com/customic/image/upload/v1623150514/banners2021/1200x466-banner-01_unywmi.png",
+          "mobile_img": "https://res.cloudinary.com/customic/image/upload/v1623150514/banners2021/Customic-lab-01_xc91gl.png",
+          "link": "https://www.lab.customic.com.br/"
+        },
         {
           "start": "",
           "end": "",
