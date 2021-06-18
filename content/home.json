@@ -74,7 +74,7 @@
     },
     {
       "type": "custom-content",
-      "markdown": "## **Veja mais em nosso Instagram: [@customic](https://www.instagram.com/customic/)**"
+      "markdown": "`<div class=\"page-title container mt-4 mb-4 mb-lg-5\"><div class=\"collectionID\"><h2 class=\"my-0\">CATEGORIAS EM DESTAQUE</h2></div></div>`"
     },
     {
       "type": "banners-grid",
@@ -119,13 +119,13 @@
       "link": ""
     },
     {
+      "type": "custom-content",
+      "markdown": "## **Veja mais em nosso Instagram: [@customic](https://www.instagram.com/customic/)**"
+    },
+    {
       "type": "responsive-banner",
       "img": "/img/uploads/banner-instagram-v1.png",
       "link": "https://www.instagram.com/customic/"
-    },
-    {
-      "type": "custom-content",
-      "markdown": "`<div class=\"page-title container mt-4 mb-4 mb-lg-5\"><div class=\"collectionID\"><h2 class=\"my-0\">CATEGORIAS EM DESTAQUE</h2></div></div>`"
     }
   ]
 }
