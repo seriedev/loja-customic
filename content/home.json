@@ -67,8 +67,8 @@
     {
       "type": "collection-shelf",
       "shuffle": true,
-      "limit": 12,
-      "page": 1,
+      "limit": "",
+      "page": "",
       "collection_id": "60ccb425d24de4526fa86db2:collections:Linha de Proteção #AntiBactéria:/linha-de-protecao-antibacteria",
       "sort": "news"
     },
