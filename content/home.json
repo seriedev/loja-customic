@@ -110,10 +110,12 @@
     {
       "type": "collection-shelf",
       "shuffle": true,
-      "collection_id": "606c9f9333554a7d2d3cd8a3:collections:Vitrine Customic 2021:/vitrine-customic-2021",
+      "collection_id": "606c9f9333554a7d2d3cd8a3:collections:Linha Impactor de Proteção Militar:/linha-impactor-de-protecao-militar",
       "headless": false,
-      "title": "Capas +   ",
-      "link": ""
+      "title": "Linha Impactor com Proteção Militar",
+      "link": "",
+      "sort": "slug",
+      "page": 3
     },
     {
       "type": "custom-content",
