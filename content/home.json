@@ -74,6 +74,10 @@
       "title": "Linha AntiBactéria Customic"
     },
     {
+      "type": "custom-content",
+      "markdown": "###### \\    Coleções em destaque"
+    },
+    {
       "type": "banners-grid",
       "banners": [
         {
