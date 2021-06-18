@@ -9,63 +9,58 @@
         {
           "start": "",
           "end": "",
-          "img": "https://res.cloudinary.com/customic/image/upload/v1623150514/banners2021/1200x466-banner-02_zroj8l.png",
+          "img": "https://i.imgur.com/CArj62g.png",
+          "mobile_img": "https://i.imgur.com/bhUjXOF.png",
           "link": "https://www.lab.customic.com.br/",
-          "alt": "valentine'sDay2021",
-          "mobile_img": "https://res.cloudinary.com/customic/image/upload/v1623150514/banners2021/Customic-lab-02_rdls3s.png"
+          "alt": "CustomicLab2021"
         },
         {
           "start": "",
           "end": "",
-          "img": "https://res.cloudinary.com/customic/image/upload/v1623166172/banners2021/2500x970-banner-_150dpi_tief3g.png",
-          "mobile_img": "https://res.cloudinary.com/customic/image/upload/v1623150514/banners2021/Customic-lab-01_xc91gl.png",
-          "link": "https://www.lab.customic.com.br/"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "https://i.imgur.com/892Rdxt.png",
-          "mobile_img": "/img/uploads/banner-mobile-pynw.jpg",
-          "link": "https://customic.com.br/capas-antibacteria",
+          "img": "https://i.imgur.com/05X8GTc.png",
+          "mobile_img": "https://i.imgur.com/QtjztZ8.png",
+          "link": "https://www.instagram.com/customic/",
           "alt": "PYNW2021"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/asset-1_ok.jpg",
-          "link": "https://customic.com.br/impactor-flex-antibacteria-all",
-          "mobile_img": "https://i.imgur.com/R1PJGki.png",
-          "alt": "flexantibac2021"
+          "img": "https://i.imgur.com/NvYY0j9.png",
+          "link": "https://customic.com.br/capas-antibacteria",
+          "mobile_img": "https://i.imgur.com/antXW4J.png",
+          "alt": "AntiBacteria2021"
         },
         {
-          "img": "/img/uploads/banner-desk-seed.jpg",
-          "mobile_img": "/img/uploads/banner-mobile-seed.jpg",
+          "start": "",
+          "end": "",
+          "img": "https://i.imgur.com/drc4JbS.png",
+          "mobile_img": "https://i.imgur.com/mNVVKI8.png",
+          "link": "https://customic.com.br/impactor-ultra-fabric-all",
+          "alt": "UltraFabric2021"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "https://i.imgur.com/mDfvC6Q.png",
+          "link": "https://customic.com.br/impactor-flex-all",
+          "mobile_img": "",
+          "alt": "ImpactorFlex2021"
+        },
+        {
+          "img": "https://i.imgur.com/KdccxBC.png",
+          "mobile_img": "https://i.imgur.com/72wpRvH.png",
           "link": "https://customic.com.br/seed-eco-case-antibacteria",
           "alt": "SeedAntibac2021",
           "start": "",
           "end": ""
         },
         {
-          "img": "/img/uploads/banner-desk-popsockets.jpg",
-          "mobile_img": "/img/uploads/banner-mobile-popsockets.jpg",
+          "img": "https://i.imgur.com/P08ni4z.png",
+          "mobile_img": "https://i.imgur.com/1XuPT1t.png",
           "alt": "popsocket2021",
           "start": "",
           "end": "",
-          "link": "/popsockets"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-siteii-c-compressed3.jpg",
-          "mobile_img": "https://i.imgur.com/IoxE3pC.png",
-          "link": "/impactor-ultra-fabric-all"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/banner-siteii-e-compressed5.jpg",
-          "link": "/impactor-flex-all",
-          "mobile_img": "https://i.imgur.com/8WZSm3b.png"
+          "link": "https://customic.com.br/popsockets"
         }
       ]
     },
