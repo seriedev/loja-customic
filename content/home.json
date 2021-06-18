@@ -110,6 +110,15 @@
     {
       "type": "collection-shelf",
       "shuffle": true,
+      "limit": "",
+      "page": 3,
+      "collection_id": "60871b81e875b03a408daf0c:categories:PopSockets:/popsockets",
+      "sort": "news",
+      "title": "PopSockets, o Original chegou!"
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": true,
       "collection_id": "606c9f9333554a7d2d3cd8a3:collections:Linha Impactor de Proteção Militar:/linha-impactor-de-protecao-militar",
       "headless": false,
       "title": "Linha Impactor com Proteção Militar",
