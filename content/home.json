@@ -84,7 +84,7 @@
     },
     {
       "type": "custom-content",
-      "markdown": "`<div style=\"text-align:center\">Coleções em destaque</p></div>```"
+      "markdown": "######  Coleções em Destaque"
     },
     {
       "type": "banners-grid",
