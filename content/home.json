@@ -84,7 +84,7 @@
     },
     {
       "type": "custom-content",
-      "markdown": "###### <div class=\"page-title container mt-4 mb-4 mb-lg-5\"><div class=\"collectionID\"><h1 class=\"my-0\">Coleções em destaque</h2></div></div>"
+      "markdown": "<!--StartFragment-->\n\n```\n<div style=\"text-align:center\">Coleções em destaque</p></div>\n```\n\n<!--EndFragment-->"
     },
     {
       "type": "banners-grid",
