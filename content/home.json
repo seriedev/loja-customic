@@ -84,7 +84,7 @@
     },
     {
       "type": "custom-content",
-      "markdown": "```\n<div class=\"collectionID\"><h2 class=\"my-0\">Coleções em Destaque</h2></div>\n```"
+      "markdown": "<div class=\"collectionID\"><h2 class=\"my-0\"><div style=\"text-align:center\">Coleções em Destaque</h2></div>"
     },
     {
       "type": "banners-grid",
