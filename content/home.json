@@ -66,7 +66,7 @@
     },
     {
       "type": "collection-shelf",
-      "shuffle": true,
+      "shuffle": false,
       "limit": "",
       "page": "",
       "collection_id": "60ccf877d24de4526fa8aa4e:collections:Capas Especiais e Eco Cases Biodegradáveis:/capas-especiais-e-eco-cases-biodegradaveis",
