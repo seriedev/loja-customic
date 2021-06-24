@@ -8,7 +8,7 @@
       "type": "page-title"
     },
     {
-      "type": "document-banner",
+      "type": "document-description",
       "enabled": true
     },
     {
@@ -17,8 +17,8 @@
       "sort": "news"
     },
     {
-      "type": "document-description",
-      "enabled": true
+      "type": "document-banner",
+      "enabled": false
     }
   ]
 }
