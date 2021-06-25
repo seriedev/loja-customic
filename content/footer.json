@@ -77,7 +77,11 @@
   "stamps": [
     {
       "link": "https://transparencyreport.google.com/safe-browsing/search?url=customic.com.br",
-      "src": "/img/uploads/google.png"
+      "src": "https://i.imgur.com/RxVM87b.png"
+    },
+    {
+      "src": "https://i.imgur.com/l7i8Aqh.png",
+      "link": "https://www.ssllabs.com/ssltest/analyze.html?d=customic.com.br"
     }
   ],
   "payment_methods": {
