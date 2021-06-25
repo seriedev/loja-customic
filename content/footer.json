@@ -87,7 +87,7 @@
   "payment_methods": {
     "bb": false,
     "visa": true,
-    "boleto": false,
+    "boleto": true,
     "aura": false,
     "banrisul": false,
     "elo": true,
