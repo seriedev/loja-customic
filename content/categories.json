@@ -5,11 +5,11 @@
       "enabled": true
     },
     {
-      "type": "page-title"
-    },
-    {
       "type": "document-description",
       "enabled": true
+    },
+    {
+      "type": "page-title"
     },
     {
       "type": "category-retail",
