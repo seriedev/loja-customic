@@ -97,6 +97,7 @@
     "santander": false,
     "mastercard": true,
     "citibank": false,
+    "hiper": true,
     "diners": true,
     "mais": false,
     "amex": true,
