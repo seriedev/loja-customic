@@ -2,7 +2,7 @@ import { price as getPrice } from '@ecomplus/utils'
 import '#template/js/checkout'
 import './custom-js/checkout'
 
-const isTEF = false
+const isTEF = Boolean(window.SKM && window.SKM.Schalter)
 const tefCompanyId = 'teste'
 
 const appendInlineCSS = css => {
