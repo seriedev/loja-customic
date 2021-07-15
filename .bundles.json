@@ -11,8 +11,8 @@
     "app-confirmation": "chunk.2d6e320cebfcdef2968d.js",
     "app-order": "chunk.dc3156f5519fb7d5a602.js",
     "checkout": [
-      "checkout.409f263a2252cd4bb03a.js",
-      "checkout.409f263a2252cd4bb03a.js.map"
+      "checkout.ee031c37d34f8c804cce.js",
+      "checkout.ee031c37d34f8c804cce.js.map"
     ],
     "storefront": [
       "storefront.2c0acede2d2425b88aa4.css",
