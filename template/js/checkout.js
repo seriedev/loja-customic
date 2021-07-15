@@ -19,7 +19,9 @@ const appendInlineCSS = css => {
 if (!isTEF) {
   appendInlineCSS('.payment__gateway[data-label=TEF] { display: none }')
 } else {
+  window.alert('TEF')
   window.SKMReady = function () {
+    window.alert('SKM ready')
     try {
       window.SKM.Schalter.Tef.CliSitef.InicializarTef(document.title, 'holder', 0, 'pt-BR',
         function () {
@@ -45,6 +47,7 @@ if (!isTEF) {
 
   window._waitingTEF = new Promise(function (resolve, reject) {
     window._initTEF = function () {
+      window.alert('TEF init')
       if (window.storefrontApp) {
         const { amount, items } = window.storefrontApp
         if (amount && amount.total) {
