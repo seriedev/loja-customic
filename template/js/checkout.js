@@ -3,7 +3,7 @@ import '#template/js/checkout'
 import './custom-js/checkout'
 
 const isTEF = Boolean(window.SKM && window.SKM.Schalter)
-const tefCompanyId = 'teste'
+const tefCompanyId = '42'
 
 const appendInlineCSS = css => {
   const $style = document.createElement('style')
