@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.75a5c556f3004bcd5d3a120b9567c592.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.e2fbd6601e25661dc3bddf2da19b38c3.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.aad47fa87eb528571f91cfd755fb8270.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.4c75f9ab4f3aa94cc29077e92da7ba97.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.14ef75ade7fc8f789a7e6ba1febc8cd7.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Customic",
+  "short_name": "Customic",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Customic: Capas Especiais para Smartphones e Tablet",
+  "background_color": "#2b2938",
+  "theme_color": "#2b2938"
+}

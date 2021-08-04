@@ -1,0 +1,117 @@
+
+#sch-tef-main-container-message,
+#sch-tef-main-container-content,
+#sch-tef-main-container-navigator,
+#sch-tef-main-container { width: 100%; padding: 10px; overflow: hidden; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+#sch-tef-overlayer,
+#sch-tef-main-container { -webkit-transition: all 500ms; transition: all 500ms; }
+
+/* TEF BLOCK OVERLAYER */
+#sch-tef-overlayer { width:100%; height:100%; background-color:rgba(0, 0, 0, 0.7); position:fixed; top:0; left:0; z-index:9998; opacity:0; }
+#sch-tef-overlayer.visible { opacity:1; }
+
+/* MAIN CONTAINER */
+#sch-tef-main-container { width:50%; height:auto; margin:-20% 0 0 -25%; padding:20px; color:#444; font-family:Arial; border-radius:3px; box-shadow:0 0 10px 1px #333; position:absolute; top:50%; left:50%; z-index: 9999; 
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0, #d7dfe5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#ffffff), color-stop(100%,#d7dfe5));
+    background: -webkit-linear-gradient(top,  #ffffff 0,#d7dfe5 100%);
+    background: -o-linear-gradient(top,  #ffffff 0,#d7dfe5 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0,#d7dfe5 100%);
+    background: linear-gradient(to bottom,  #ffffff 0,#d7dfe5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d7dfe5',GradientType=0 );
+}
+
+/* MESSAGE */
+#sch-tef-main-container-message { }
+#sch-tef-message { font-size:28px; font-family: inherit; text-align: center; text-shadow: 0 1px 1px #999; }
+
+/* MAIN CONTAINER CONTENT */
+#sch-tef-main-container-content {  }
+
+/* TEF NUMERIC KEYBOARD */
+#sch-tef-numkeyboard,
+#sch-tef-numkeyboard-keys-list { width:259px; }
+
+#sch-tef-numkeyboard { margin: 0 auto; position: relative; }
+
+#sch-tef-block-display { width: 100%; height: 58px; position: absolute; z-index: 9999; display: block; }
+
+#sch-tef-numkeyboard-input { width:100%; height:48px; margin-bottom:10px; padding: 0 10px; font-size: 16px; text-align: right; }
+
+#sch-tef-numkeyboard-keys-list { margin:0; padding:0; list-style:none; overflow:hidden; position:relative; }
+#sch-tef-numkeyboard-keys-list li { width:64px; height:64px; margin:1px 0 0 1px; float:left; }
+#sch-tef-numkeyboard-keys-list li:nth-child(3n-2) { margin-left: 0; clear:left; }
+
+#sch-tef-numkeyboard-keys-list li:nth-child(13),
+#sch-tef-numkeyboard-keys-list li:nth-child(14),
+#sch-tef-numkeyboard-keys-list li:nth-child(15) { position:absolute; right:0; }
+
+#sch-tef-numkeyboard-keys-list li:nth-child(13) { top:0; }
+#sch-tef-numkeyboard-keys-list li:nth-child(14) { top:64px; }
+#sch-tef-numkeyboard-keys-list li:nth-child(15) { top:130px; }
+#sch-tef-numkeyboard-keys-list li:nth-child(15) button { width:64px !important; height:129px !important; font-size:12px !important; }
+
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key { width:64px; height:64px; padding:5px 10px; color:#333; background-color:#eee; border:1px solid #ccc; border-radius:3px; font-size:1.2em;  }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key span { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key:hover { box-shadow: 0 0 2px 0 #60BDFA; }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key:active { border-color:#fff; color:#999; }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-dead-button:active { border-color:#ccc !important; }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-9 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-8 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-7 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-6 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-5 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-4 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-3 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-2 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-1 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-0 { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-enter { }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-revise { font-size: 32px; font-weight: 800; }
+#sch-tef-numkeyboard-keys-list li .sch-tef-numkeyboard-key-clear { }
+
+/* TEF BUTTONS */
+#sch-tef-buttons { text-align:center; }
+#sch-tef-buttons .sch-tef-button { min-width:200px; height:64px; margin:4px 0 0 4px; padding:5px 10px; color:#666; font-size:1.2em; border:none; border-radius:5px; border-bottom:1px solid #999; border-top: 1px solid #fff; box-shadow: 0 0 1px 0 #999; text-shadow:0 1px 1px #fff;
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #fff 0, #ddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#fff), color-stop(100%,#ddd));
+    background: -webkit-linear-gradient(top,  #fff 0,#ddd 100%);
+    background: -o-linear-gradient(top,  #fff 0,#ddd 100%);
+    background: -ms-linear-gradient(top,  #fff 0,#ddd 100%);
+    background: linear-gradient(to bottom,  #fff 0,#ddd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#ddd',GradientType=0 );
+}
+#sch-tef-buttons .sch-tef-button:first-child { margin-left: 0; }
+#sch-tef-buttons .sch-tef-button span { }
+#sch-tef-buttons .sch-tef-button:hover { box-shadow: 0 0 2px 0 #60BDFA; }
+#sch-tef-buttons .sch-tef-button:active {
+    background: #ddd;
+    background: -moz-linear-gradient(top,  #ddd 0, #fff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#ddd), color-stop(100%,#fff));
+    background: -webkit-linear-gradient(top,  #ddd 0,#fff 100%);
+    background: -o-linear-gradient(top,  #ddd 0,#fff 100%);
+    background: -ms-linear-gradient(top,  #ddd 0,#fff 100%);
+    background: linear-gradient(to bottom,  #ddd 0,#fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ddd', endColorstr='#fff',GradientType=0 );
+}
+
+/* NAVIGATION */
+#sch-tef-main-container-navigator { }
+
+#sch-nav-buttons { padding-top:5px; text-align:center; }
+#sch-nav-buttons .sch-nav-button { min-width:100px; height:32px; margin:0 0 0 4px; background:transparent; border:1px solid #CCC; color:#666; }
+#sch-nav-buttons .sch-nav-button:first-child { margin-left: 0; }
+#sch-nav-buttons .sch-nav-button span { }
+#sch-nav-buttons .sch-nav-button:hover { box-shadow: 0 0 2px 0 #60BDFA; }
+#sch-nav-buttons .sch-nav-button:active { background-color:#ddd; }
+
+#sch-nav-buttons #sch-nav-button-confirm { }
+#sch-nav-buttons #sch-nav-button-cancel { }
+
+/* GENERAL */
+#sch-tef-numkeyboard-keys-list .sch-tef-numkeyboard-key,
+#sch-tef-buttons .sch-tef-button,
+#sch-nav-buttons .sch-nav-button { cursor: pointer; }
