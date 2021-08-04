@@ -90,14 +90,16 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/banner-produtoscapas1.png",
+          "img": "/img/uploads/anyconv.com__banner-produtoscapas1.webp",
           "link": "/todasascasesdeiphone/",
-          "alt": "Capa Iphone"
+          "alt": "Capa Iphone",
+          "mobile_img": "/img/uploads/anyconv.com__banner-produtoscapas1_.webp"
         },
         {
-          "img": "/img/uploads/banner-produtos-android2.png",
+          "img": "/img/uploads/anyconv.com__banner-produtos-android2.webp",
           "link": "/todos-modelos-de-android/",
-          "alt": "Capa Android"
+          "alt": "Capa Android",
+          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-android2__.webp"
         }
       ]
     },
@@ -105,9 +107,10 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/banner-produtos-ipad3.png",
+          "img": "/img/uploads/anyconv.com__banner-produtos-ipad3.webp",
           "link": "/ipad-e-macbook/",
-          "alt": "Capa Ipad"
+          "alt": "Capa Ipad",
+          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-ipad3__.webp"
         },
         {
           "img": "/img/uploads/banner-produtos-peliculas4.png",
