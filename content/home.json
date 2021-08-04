@@ -149,8 +149,9 @@
     },
     {
       "type": "responsive-banner",
-      "img": "/img/uploads/banner-instagram-v1.png",
-      "link": "https://www.instagram.com/customic/"
+      "img": "/img/uploads/anyconv.com__banner-instagram-v1.webp",
+      "link": "https://www.instagram.com/customic/",
+      "mobile_img": "/img/uploads/anyconv.com__banner-instagram-v1__.webp"
     }
   ]
 }
