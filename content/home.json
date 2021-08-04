@@ -113,9 +113,10 @@
           "mobile_img": "/img/uploads/anyconv.com__banner-produtos-ipad3__.webp"
         },
         {
-          "img": "/img/uploads/banner-produtos-peliculas4.png",
+          "img": "/img/uploads/anyconv.com__banner-produtos-peliculas4.webp",
           "link": "/u_10009",
-          "alt": "Película de proteção para celular"
+          "alt": "Película de proteção para celular",
+          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-peliculas4__.webp"
         }
       ]
     },
