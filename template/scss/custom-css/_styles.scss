@@ -63,3 +63,8 @@
   width: 144px;
   height: 144px;
 }
+.header {
+  & i {
+    color: #2b2938
+  }
+}
