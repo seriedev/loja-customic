@@ -134,14 +134,15 @@
       "title": "PopSockets®, o Original chegou!"
     },
     {
-      "type": "collection-shelf",
-      "shuffle": true,
-      "collection_id": "606c9f9333554a7d2d3cd8a3:collections:Linha Impactor de Proteção Militar:/linha-impactor-de-protecao-militar",
-      "headless": false,
+      "page": "",
       "title": "Linha Impactor com Proteção Militar",
+      "shuffle": true,
+      "headless": false,
+      "type": "collection-shelf",
       "link": "",
-      "sort": "slug",
-      "page": ""
+      "limit": 24,
+      "collection_id": "606c9f9333554a7d2d3cd8a3:collections:Linha Impactor de Proteção Militar:/linha-impactor-de-protecao-militar",
+      "sort": "slug"
     },
     {
       "type": "custom-content",
