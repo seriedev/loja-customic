@@ -65,6 +65,10 @@
       ]
     },
     {
+      "type": "info-bar",
+      "enabled": true
+    },
+    {
       "type": "collection-shelf",
       "shuffle": true,
       "limit": "",
@@ -127,10 +131,6 @@
           "mobile_img": "/img/uploads/anyconv.com__banner-produtos-peliculas4__.webp"
         }
       ]
-    },
-    {
-      "type": "info-bar",
-      "enabled": true
     },
     {
       "type": "collection-shelf",
