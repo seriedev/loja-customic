@@ -1,7 +1,9 @@
 {
   "marketing_stripe": {
     "text": "Frete Grátis em compras acima de R$120 para todo Brasil",
-    "link": ""
+    "link": "",
+    "background": "#2b2938",
+    "color": "#2b2938"
   },
   "contacts_stripe": {
     "pages": [
