@@ -66,14 +66,6 @@
     },
     {
       "type": "collection-shelf",
-      "shuffle": true,
-      "limit": "",
-      "page": "",
-      "collection_id": "61167e3fcfbcd970597cfb1b:categories:Capas MagSafe:/capas-magsafe",
-      "sort": "views"
-    },
-    {
-      "type": "collection-shelf",
       "shuffle": false,
       "limit": "",
       "page": "",
