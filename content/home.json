@@ -3,6 +3,11 @@
   "meta_description": "São mais de 10 anos inovando. Capas com Proteção Militar certificadas, Capa Biodegradável Seed® Eco Case, Capinhas personalizadas para iPhone e linha smartphone Android, películas e acessórios. Customic é a melhor capa do Brasil.",
   "sections": [
     {
+      "type": "dynamic-showcase",
+      "load_more": true,
+      "sort": "sales"
+    },
+    {
       "type": "banner-slider",
       "autoplay": 6000,
       "slides": [
