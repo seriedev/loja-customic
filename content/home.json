@@ -3,9 +3,19 @@
   "meta_description": "São mais de 10 anos inovando. Capas com Proteção Militar certificadas, Capa Biodegradável Seed® Eco Case, Capinhas personalizadas para iPhone e linha smartphone Android, películas e acessórios. Customic é a melhor capa do Brasil.",
   "sections": [
     {
-      "type": "dynamic-showcase",
-      "load_more": true,
-      "sort": "sales"
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": "",
+      "page": "",
+      "collection_id": "60ccf877d24de4526fa8aa4e:collections:Capas Especiais e Eco Cases Biodegradáveis:/capas-especiais-e-eco-cases-biodegradaveis",
+      "sort": "offers",
+      "title": "Capas Especiais e Eco Cases Biodegradáveis"
     },
     {
       "type": "banner-slider",
@@ -68,15 +78,6 @@
           "link": "https://customic.com.br/popsockets"
         }
       ]
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": "",
-      "page": "",
-      "collection_id": "60ccf877d24de4526fa8aa4e:collections:Capas Especiais e Eco Cases Biodegradáveis:/capas-especiais-e-eco-cases-biodegradaveis",
-      "sort": "offers",
-      "title": "Capas Especiais e Eco Cases Biodegradáveis"
     },
     {
       "type": "collection-shelf",
