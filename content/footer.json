@@ -36,6 +36,10 @@
         "url": "/pages/onde-nos-encontrar"
       },
       {
+        "text": "Blog",
+        "url": "https://blog.customic.com.br/"
+      },
+      {
         "text": "Contato",
         "url": "/pages/contato"
       }
