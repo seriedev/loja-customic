@@ -65,23 +65,6 @@
       ]
     },
     {
-      "type": "banners-grid",
-      "banners": [
-        {
-          "img": "/img/uploads/anyconv.com__banner-produtoscapas1.webp",
-          "link": "/todasascasesdeiphone/",
-          "alt": "Capa Iphone",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtoscapas1_.webp"
-        },
-        {
-          "img": "/img/uploads/anyconv.com__banner-produtos-android2.webp",
-          "link": "/todos-modelos-de-android/",
-          "alt": "Capa Android",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-android2__.webp"
-        }
-      ]
-    },
-    {
       "type": "collection-shelf",
       "shuffle": true,
       "limit": 12,
@@ -125,6 +108,23 @@
     {
       "type": "custom-content",
       "markdown": "<div class=\"collectionID\"><h2 class=\"my-0\"><div style=\"text-align:center\">Coleções em Destaque</h2></div>"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/anyconv.com__banner-produtoscapas1.webp",
+          "link": "/todasascasesdeiphone/",
+          "alt": "Capa Iphone",
+          "mobile_img": "/img/uploads/anyconv.com__banner-produtoscapas1_.webp"
+        },
+        {
+          "img": "/img/uploads/anyconv.com__banner-produtos-android2.webp",
+          "link": "/todos-modelos-de-android/",
+          "alt": "Capa Android",
+          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-android2__.webp"
+        }
+      ]
     },
     {
       "type": "banners-grid",
