@@ -7,6 +7,13 @@
       "autoplay": 6000,
       "slides": [
         {
+          "start": "2021-11-06T12:05:42.147Z",
+          "end": "2021-11-06T12:05:42.287Z",
+          "img": "/img/uploads/customic-desk.jpg",
+          "link": "/black-friday-customic",
+          "mobile_img": "/img/uploads/customic-mobile.jpg"
+        },
+        {
           "start": "",
           "end": "",
           "img": "/img/uploads/anyconv.com__1.webp",
