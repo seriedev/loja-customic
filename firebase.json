@@ -1,6 +1,11 @@
 {
   "hosting": {
     "redirects": [
+      {
+        "source": "/seed-eco-case",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      }
     ],
     "public": "dist",
     "ignore": [
