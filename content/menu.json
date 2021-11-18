@@ -1,11 +1,12 @@
 {
   "sort_categories": [
-    "dispositivos",
+    "capas",
     "colecoes",
     "u_10009",
-    "acessorios",
-    "personalize"
+    "popsockets",
+    "acessorios"
   ],
   "phone_wpp": true,
-  "socials": true
+  "socials": true,
+  "alphabetical_order": true
 }
