@@ -5,6 +5,106 @@
         "source": "/seed-eco-case",
         "destination": "/seed-eco-case-all",
         "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-11-pro-red",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-11-pro-white",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-11-green",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-11",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-11-purple",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-11-red",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-11-white",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xs-max-green",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xs-max",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xs-max-purple",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xs-max-red",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xr-green",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xr",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xr-purple",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xr-red",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-xr-white",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-x-xs-green",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-x-xs",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-x-xs-white",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-iphone-x-xs-purple",
+        "destination": "/seed-eco-case-all",
+        "type": 301
       }
     ],
     "public": "dist",
