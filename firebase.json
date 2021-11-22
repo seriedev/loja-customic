@@ -2,6 +2,31 @@
   "hosting": {
     "redirects": [
       {
+        "source": "/seed-eco-case-petroleum",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-white",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-red",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-purple",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
+        "source": "/seed-eco-case-green",
+        "destination": "/seed-eco-case-all",
+        "type": 301
+      },
+      {
         "source": "/seed-eco-case",
         "destination": "/seed-eco-case-all",
         "type": 301
