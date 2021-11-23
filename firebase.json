@@ -130,6 +130,146 @@
         "source": "/seed-eco-case-iphone-x-xs-purple",
         "destination": "/seed-eco-case-all",
         "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-purple-iphone-11-pro-max",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-blue-iphone-11-pro-max",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-black-iphone-11-pro-max",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-purple-iphone-11-pro",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-grey-iphone-11-pro",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-blue-iphone-11-pro",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-black-iphone-11-pro",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-purple-iphone-11",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-grey-iphone-11",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-blue-iphone-11",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-black-iphone-11",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-purple-iphone-xs-max",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-grey-iphone-xs-max",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-blue-iphone-xs-max",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-black-iphone-xs-max",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-purple-iphone-xr",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-grey-iphone-xr",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-blue-iphone-xr",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-black-iphone-xr",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-purple-iphone-x-xs",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-grey-iphone-x-xs",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-blue-iphone-x-xs",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-black-iphone-x-xs",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-purple",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-grey",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-blue",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric-black",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
+      },
+      {
+        "source": "/impactor-ultra-fabric",
+        "destination": "/impactor-ultra-fabric-all",
+        "type": 301
       }
     ],
     "public": "dist",
