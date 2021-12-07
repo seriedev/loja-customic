@@ -10,6 +10,6 @@ storefront.on('widget:@ecomplus/widget-tag-manager', () => {
         document.getElementById('c-5f1f3f54f023684cdbd4a1e4').href = '/seed-eco-case-all';
         document.getElementById('c-5f1f3f57f023684cdbd4a1eb').href = '/hardbox-all';
         document.getElementById('c-5f1f3f3bf023684cdbd4a1af').href = '/impactor-clear-all';
-        document.getElementById('c-5fb80f6669274c73fcd951f5').href = '/seed-eco-case-antibacteria
+        document.getElementById('c-5fb80f6669274c73fcd951f5').href = '/seed-eco-case-antibacteria;
     }, 800);
   });
