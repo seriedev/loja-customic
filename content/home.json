@@ -160,9 +160,10 @@
     },
     {
       "type": "responsive-banner",
-      "img": "/img/uploads/anyconv.com__banner-instagram-v1.webp",
+      "img": "/img/uploads/banner-insta-desk.png",
       "link": "https://www.instagram.com/customic/",
-      "mobile_img": "/img/uploads/anyconv.com__banner-instagram-v1__.webp"
+      "mobile_img": "/img/uploads/banner-insta-mobile.png",
+      "alt": "VivaOMovimentoCustomic2022"
     }
   ]
 }
