@@ -1,6 +1,4 @@
 // Add your custom JavaScript for storefront pages here.
-storefront.on('widget:@ecomplus/widget-tag-manager', () => {
-    setTimeout(() => {
         document.getElementById('c-5fad9d7580c6216a3fc547dc').href = '/impactor-flex-antibacteria-all';
         document.getElementById('c-5f1f3f5bf023684cdbd4a1f4').href = '/impactor-ultra-all';
         document.getElementById('c-5f1f3f6cf023684cdbd4a218').href = '/impactor-ultra-fabric-all';
@@ -10,6 +8,4 @@ storefront.on('widget:@ecomplus/widget-tag-manager', () => {
         document.getElementById('c-5f1f3f54f023684cdbd4a1e4').href = '/seed-eco-case-all';
         document.getElementById('c-5f1f3f57f023684cdbd4a1eb').href = '/hardbox-all';
         document.getElementById('c-5f1f3f3bf023684cdbd4a1af').href = '/impactor-clear-all';
-        document.getElementById('c-5fb80f6669274c73fcd951f5').href = '/seed-eco-case-antibacteria;
-    }, 800);
-  });
+        document.getElementById('c-5fb80f6669274c73fcd951f5').href = '/seed-eco-case-antibacteria';
