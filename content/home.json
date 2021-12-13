@@ -73,22 +73,6 @@
     {
       "type": "collection-shelf",
       "shuffle": true,
-      "limit": 24,
-      "page": "",
-      "sort": "news",
-      "title": "Lançamentos"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": true,
-      "limit": 12,
-      "page": "",
-      "sort": "offers",
-      "title": "Ofertas"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": true,
       "limit": 12,
       "page": "",
       "sort": "sales",
