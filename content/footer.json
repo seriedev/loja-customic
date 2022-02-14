@@ -47,27 +47,27 @@
   },
   "links_2": {
     "list_categories": true,
-    "title": "",
+    "title": "Categorias",
     "list": [
       {
         "text": "Aparelhos",
-        "url": "/dispositivos/"
+        "url": ""
       },
       {
         "text": "Coleções",
-        "url": "/colecoes/"
+        "url": ""
       },
       {
         "text": "Películas",
-        "url": "/peliculas/"
+        "url": ""
       },
       {
         "text": "Acessórios",
-        "url": "/acessorios/"
+        "url": ""
       },
       {
         "text": "Personalize",
-        "url": "/design_lab/application_upload.php"
+        "url": "https://www.lab.customic.com.br/"
       }
     ]
   },
@@ -107,5 +107,5 @@
     "amex": true,
     "itau": false
   },
-  "credits": "Pulz Comércio de Importados Eireli - CNPJ: 06.051.394/0001-93 © 2021 - Todos os direitos reservados."
+  "credits": "Pulz Comércio de Importados Eireli - CNPJ: 06.051.394/0001-93 © 2022 - Todos os direitos reservados."
 }
