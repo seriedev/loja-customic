@@ -111,3 +111,14 @@
     padding:10px;
   }
 }
+
+/*Footer
+  Seri.e Design*/
+.footer{
+  &__evolutionBy{
+    img{
+      filter: brightness(0) invert(1);
+      max-height: 50px;
+    }
+  }
+}
