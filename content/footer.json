@@ -50,20 +50,24 @@
     "title": "Categorias",
     "list": [
       {
-        "text": "Acessórios",
-        "url": "https://customic.com.br/acessorios"
-      },
-      {
         "text": "Capas",
         "url": "https://customic.com.br/capas"
+      },
+      {
+        "text": "Coleções",
+        "url": "https://customic.com.br/colecoes"
       },
       {
         "text": "Películas",
         "url": "https://customic.com.br/u_10009"
       },
       {
-        "text": "Coleções",
-        "url": "https://customic.com.br/colecoes"
+        "text": "PopSockets",
+        "url": "https://customic.com.br/popsockets"
+      },
+      {
+        "text": "Acessórios",
+        "url": "https://customic.com.br/acessorios"
       },
       {
         "text": "Personalize",
