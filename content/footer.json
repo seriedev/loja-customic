@@ -5,7 +5,7 @@
   },
   "links_1": {
     "list_pages": false,
-    "title": "",
+    "title": "Suporte",
     "list": [
       {
         "url": "/pages/sobre",
@@ -46,28 +46,32 @@
     ]
   },
   "links_2": {
-    "list_categories": true,
-    "title": "",
+    "list_categories": false,
+    "title": "Categorias",
     "list": [
       {
-        "text": "Aparelhos",
-        "url": "/dispositivos/"
+        "text": "Capas",
+        "url": "https://customic.com.br/capas"
       },
       {
         "text": "Coleções",
-        "url": "/colecoes/"
+        "url": "https://customic.com.br/colecoes"
       },
       {
         "text": "Películas",
-        "url": "/peliculas/"
+        "url": "https://customic.com.br/u_10009"
+      },
+      {
+        "text": "PopSockets",
+        "url": "https://customic.com.br/popsockets"
       },
       {
         "text": "Acessórios",
-        "url": "/acessorios/"
+        "url": "https://customic.com.br/acessorios"
       },
       {
         "text": "Personalize",
-        "url": "/design_lab/application_upload.php"
+        "url": "https://www.lab.customic.com.br/"
       }
     ]
   },
@@ -107,5 +111,5 @@
     "amex": true,
     "itau": false
   },
-  "credits": "Pulz Comércio de Importados Eireli - CNPJ: 06.051.394/0001-93 © 2021 - Todos os direitos reservados."
+  "credits": "Pulz Comércio de Importados Eireli - CNPJ: 06.051.394/0001-93 © 2022 - Todos os direitos reservados."
 }
