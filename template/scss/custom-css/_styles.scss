@@ -1,4 +1,7 @@
 // Add your custom CSS here.
+.footer address {
+color: #fff !important;
+}
 .footer {
   &__title, & a, & i, &__credits, & address {
     color: #fff;
