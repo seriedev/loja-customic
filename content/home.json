@@ -81,10 +81,10 @@
           "mobile_img": "/img/uploads/anyconv.com__banner-categoria-customiccapas-iphone.webp"
         },
         {
-          "img": "/img/uploads/anyconv.com__banner-produtos-android2.webp",
+          "img": "/img/uploads/anyconv.com__banner-categoria-customicandroid-cases.webp",
           "link": "/todos-modelos-de-android/",
           "alt": "Capa Android",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-android2__.webp"
+          "mobile_img": "/img/uploads/anyconv.com__banner-categoria-customicandroid-cases.webp"
         }
       ]
     },
@@ -92,16 +92,16 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/anyconv.com__banner-produtos-ipad3.webp",
-          "link": "/ipad-e-macbook/",
+          "img": "/img/uploads/anyconv.com__banner-categoria-customicpeliculas-de-protecao.webp",
+          "link": "https://customic.com.br/peliculas",
           "alt": "Capa Ipad",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-ipad3__.webp"
+          "mobile_img": "/img/uploads/anyconv.com__banner-categoria-customicpeliculas-de-protecao.webp"
         },
         {
-          "img": "/img/uploads/anyconv.com__banner-produtos-peliculas4.webp",
-          "link": "https://customic.com.br/peliculas",
+          "img": "/img/uploads/anyconv.com__banner-categoria-customicpopsockets.webp",
+          "link": "https://customic.com.br/popsockets",
           "alt": "Película de proteção para celular",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-peliculas4__.webp"
+          "mobile_img": "/img/uploads/anyconv.com__banner-categoria-customicpopsockets.webp"
         }
       ]
     },
