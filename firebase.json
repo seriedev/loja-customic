@@ -2,6 +2,11 @@
   "hosting": {
     "redirects": [
       {
+        "source": "/u_10009",
+        "destination": "/peliculas",
+        "type": 301
+      },
+      {
         "source": "/seed-eco-case-petroleum",
         "destination": "/seed-eco-case-all",
         "type": 301
