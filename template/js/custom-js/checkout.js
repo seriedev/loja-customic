@@ -38,7 +38,7 @@ $(function () {
 
             if ($text == "SEDEX") {
               $list.find(".shipping-line>strong:first-child").html($html);
-              $list.addClass("sedex-tim");
+              $list.attr("sedex-tim", true);
             }
           });
         }
@@ -48,7 +48,6 @@ $(function () {
       defaultReplace();
     } else {
       if ($(".checkout__shipping").length > 0) {
-          console.log("caiu aqui");
           defaultReplace();
       } else {
         const elementToObserve = $(".checkout__shipping")[0];
@@ -108,14 +107,6 @@ $(function () {
           }, 1000);
 
           clearInterval(checkExist);
-        }
-        if ($(".checkout__shipping-method > small").length > 0) {
-            setTimeout(() => {
-                $(".checkout__shipping-method > small").html($text);
-                clearInterval(checkExist);
-              }, 1000);
-
-
         }
       }, 100); // check every 100ms
     }

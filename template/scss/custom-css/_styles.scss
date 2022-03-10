@@ -123,7 +123,7 @@
   }
 }
 //
-.sedex-tim {
+.list-group-item-action[sedex-tim] {
   .shipping-calculator__option {
     .shipping-line {
       display: flex;
@@ -135,9 +135,9 @@
     }
   }
 }
-#checkout .sedex-tim .shipping-line {
+#checkout .list-group-item-action[sedex-tim] .shipping-line {
   margin-right: 30px;
 }
-#cart .sedex-tim .shipping-line {
+#cart .list-group-item-action[sedex-tim] .shipping-line {
   margin-right: 40px;
 }
