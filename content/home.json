@@ -18,39 +18,32 @@
           "end": "",
           "img": "/img/uploads/customic-magsafe-1200x466-.jpg",
           "link": "https://customic.com.br/impactor-clear-magsafe-all",
-          "alt": "Impactor Clear MagSafe Customic",
-          "mobile_img": "/img/uploads/customic-magsafe-605x1000-.jpg"
+          "alt": "Capa Impactor Clear MagSafe Customic",
+          "mobile_img": "/img/uploads/mobile-banner-customic-0322-1.jpg"
         },
         {
           "start": "",
           "end": "",
           "img": "/img/uploads/customic-personalizadas-1200x466-.jpg",
           "link": "https://www.lab.customic.com.br/",
-          "mobile_img": "/img/uploads/customic-personalizadas-605x1000-.jpg"
+          "mobile_img": "/img/uploads/mobile-banner-customic-0322-2.jpg",
+          "alt": "Capa para Celular Personalizada Customic"
         },
         {
           "start": "2022-02-10T15:22:57.412Z",
           "end": "",
           "img": "/img/uploads/customic-ultra-1200x466-.jpg",
           "link": "https://customic.com.br/impactor-ultra-all",
-          "mobile_img": "/img/uploads/customic-ultra-605x1000-.jpg",
-          "alt": "Impactor Ultra Customic"
+          "mobile_img": "/img/uploads/mobile-banner-customic-0322-3.jpg",
+          "alt": "Capa Impactor Ultra Customic"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/anyconv.com__2.banner-desk-customic-antiblue.webp",
-          "mobile_img": "/img/uploads/2.banner-mobile-customic-antiblue.png",
+          "img": "/img/uploads/desk-banner-customic-0322-4.jpg",
+          "mobile_img": "/img/uploads/mobile-banner-customic-0322-4.jpg",
           "link": "/pelicula-antiblue-vidro-3d-customic",
-          "alt": "AntiBlueDez21"
-        },
-        {
-          "img": "/img/uploads/6.banner-desk-customic-seed.png",
-          "mobile_img": "/img/uploads/6.banner-mobile-customic-seed.png",
-          "link": "/seed-eco-case-antibacteria",
-          "alt": "SeedEcoAntibactDez21",
-          "start": "",
-          "end": ""
+          "alt": "Película Antiblue Vidro 3D Customic"
         }
       ],
       "full_width": true
