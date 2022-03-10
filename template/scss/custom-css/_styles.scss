@@ -122,3 +122,22 @@
     }
   }
 }
+//
+.sedex-tim {
+  .shipping-calculator__option {
+    .shipping-line {
+      display: flex;
+      align-items: baseline;
+      > strong.mr-2 {
+        max-width: 100%;
+        margin-right: auto;
+      }
+    }
+  }
+}
+#checkout .sedex-tim .shipping-line {
+  margin-right: 30px;
+}
+#cart .sedex-tim .shipping-line {
+  margin-right: 40px;
+}
