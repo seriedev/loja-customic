@@ -130,6 +130,12 @@
       align-items: baseline;
       > strong.mr-2 {
         max-width: 100%;
+        @media screen and (min-width: 768px) {
+          width: 70%;
+          br:not(.imutable){
+            display: none;
+          }
+        }
       }
     }
   }
