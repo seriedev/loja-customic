@@ -1,3 +1,3 @@
 [build]
-  command = "npm run build -- --prerender=index,app/index,search,404,soft-touch-all --prerender-limit=300"
+  command = "npm run build -- --prerender=index,app/index,search,404,soft-touch-all --prerender-limit=150"
   publish = "dist/"
