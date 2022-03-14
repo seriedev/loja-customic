@@ -130,8 +130,16 @@
       align-items: baseline;
       > strong.mr-2 {
         max-width: 100%;
-        margin-right: auto;
       }
+    }
+  }
+  .green{
+    font-weight: 500;
+    color: green;
+  }
+  &.active{
+    .green{
+      color: white;
     }
   }
 }

@@ -1,6 +1,35 @@
 $(function () {
     $html =
     "*Pedidos finalizados até as 15h são enviados no mesmo dia com prazo de entrega no dia útil seguinte.<br/>*Pedidos finalizados após as 15h serão enviados no dia seguinte, com prazo de entrega de 2 dias úteis da data da compra.";
+    $cookieName = "TimCampaign";
+
+    // =======================
+    var now = new Date();
+    var end = new Date();
+    end.setHours(15,0,0,0);
+
+    // end.setHours(21,0,0,0);
+    // now.getUTCHours();
+    // end.getUTCHours();
+    
+    var $remaining = new Date(end - now);
+    var $remainingString = $remaining.getHours() + ":"+ $remaining.getMinutes();
+
+    $hourConnector = $remaining.getHours() > 1 ? "nas próximas" : "na próxima";
+    // =======================
+
+    if (now.getHours() >= 15 && now.getMinutes() > 0) {
+      let tomorrow = new Date()
+      tomorrow.setDate(now.getDate() + 1);
+      tomorrow.setHours(15,0,0,0);
+      $remaining = new Date(tomorrow - now);
+      // console.log($remaining.getHours() + 3,$remaining.getMinutes())
+      $string = ($remaining.getHours() + 3) +"h "+$remaining.getMinutes()+"min";
+      $html = "Até 2 dia úteis<br><span>Se pedir dentro de <br><b class='green'>"+$string+"</b></span>";
+    }else{
+      $string = $hourConnector+"<br><b class='green'>"+ $remaining.getHours() +"h "+$remaining.getMinutes()+"min</b>";
+      $html = "Até Amanhã<br><span>Se pedir "+$string+"</span>";
+    }
 
 
   function setCookie(name, value, days) {
@@ -35,7 +64,6 @@ $(function () {
             // element == this
             $list = $(this);
             $text = $list.find("small").text();
-
             if ($text == "SEDEX") {
               $list.find(".shipping-line>strong:first-child").html($html);
               $list.attr("sedex-tim", true);
@@ -56,7 +84,7 @@ $(function () {
             defaultReplace();
           });
         });
-        observer.observe(elementToObserve, { childList: true });
+        observer.observe(elementToObserve, { childList: true,subtree : true });
       }
     }
   }
@@ -67,7 +95,7 @@ $(function () {
         changeSedex();
       });
     });
-    observer.observe(elementToObserve, { childList: true });
+    observer.observe(elementToObserve, { childList: true,subtree : true });
   }
   $cookieName = "TimCampaign";
 
@@ -93,7 +121,6 @@ $(function () {
   }
   // Pagamento
   if (getCookie($cookieName) != null) {
-    console.log("Campanha tim: checkout");
     if (window.location.href.indexOf("checkout") > 0) {
       var checkExist = setInterval(function () {
         if ($(".shipping-calculator__services .list-group").length > 0) {
