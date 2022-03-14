@@ -132,9 +132,6 @@
         max-width: 100%;
         @media screen and (min-width: 768px) {
           width: 70%;
-          br:not(.imutable){
-            display: none;
-          }
         }
       }
     }
@@ -149,8 +146,18 @@
     }
   }
 }
-#checkout .list-group-item-action[sedex-tim] .shipping-line {
-  margin-right: 30px;
+
+
+#checkout .list-group-item-action[sedex-tim] {
+  .shipping-line {
+    margin-right: 30px;
+    @media screen and (min-width: 768px) {
+      width: 70%;
+      br:not(.imutable){
+        display: none;
+      }
+    }
+  }
 }
 #cart .list-group-item-action[sedex-tim] .shipping-line {
   margin-right: 40px;
