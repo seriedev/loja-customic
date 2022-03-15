@@ -9,10 +9,20 @@ $(function () {
     var now = new Date();
     var end = new Date();
     end.setHours(15,0,0,0);
-    
+    function diff_hours(dt2, dt1) 
+    {
+   
+      var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+      diff /= (60 * 60);
+      return Math.abs(Math.round(diff));
+     
+    }
     var $remaining = new Date(end - now);
+    var $remainingHours = diff_hours(now,end);
+    var $remainingMinutes = $remaining.getMinutes();
+    if ($remainingMinutes < 0) $remainingMinutes * -1;
 
-    $hourConnector = $remaining.getHours() > 1 ? "nas próximas" : "na próxima";
+    $hourConnector = $remainingHours > 1 ? "nas próximas" : "na próxima";
     // =======================
 
     if (now.getHours() >= 15 && now.getMinutes() > 0) {
@@ -20,10 +30,10 @@ $(function () {
       tomorrow.setDate(now.getDate() + 1);
       tomorrow.setHours(15,0,0,0);
       $remaining = new Date(tomorrow - now);
-      $string = ($remaining.getHours() + 3) +"h "+$remaining.getMinutes()+"min";
+      $string = (diff_hours(tomorrow,now)) +"h "+$remaining.getMinutes()+"min";
       $html = "Até 2 dia úteis<br class='imutable'><span>Se pedir dentro de <br><b class='green'>"+$string+"</b></span>";
     }else{
-      $string = $hourConnector+"<br><b class='green'>"+ $remaining.getHours() +"h "+$remaining.getMinutes()+"min</b>";
+      $string = $hourConnector+"<br><b class='green'>"+ $remainingHours +"h "+$remainingMinutes+"min</b>";
       $html = "Até Amanhã<br class='imutable'><span>Se pedir "+$string+"</span>";
     }
 
