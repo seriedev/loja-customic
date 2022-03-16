@@ -97,52 +97,91 @@ export default {
     i19unavailable: () => i18n(i19unavailable),
 
     isSearchingPhoneModel (){
+      let body = this.body;
+      let nameProduct = this.body.name;
       let getListModels = this.body.variations;
       let term = this.searchTerm;
-      let nameTermSearch = "";
-
+      let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: ""};
+      
+      //console.log('this.body.name', this.body.name)
+      //console.log('this.body', this.body)
+      
       if(term !== undefined){
         term = term.toLowerCase();
+        nameProduct = nameProduct.toLowerCase();
+
+        console.log('getListModels',getListModels)
   
         if(getListModels !== undefined){
-  
-          getListModels.map( (variation) => {
-    
+
+          getListModels.map( (variation) => {    
+
             if(variation !== undefined){
-              let modeloVariationInitial = variation.specifications.modelo[0].text;
-              let marcaVariation = variation.specifications.marca_do_aparelho[0].text;
-              let modeloVariationFormatted = modeloVariationInitial.toLowerCase();
+              let modeloVariation = "";
+              let marcaVariation = "";
+              let variationColor = "";
 
-              if(modeloVariationFormatted === term){
-
-                term = modeloVariationInitial;
-
-                nameTermSearch = `/ ${term}`;
-                marcaVariation = marcaVariation.replaceAll(' ','-');
-
-                term = term.replaceAll(' ','-');
-
-                this.modeloSearch = `&modelo=${term}`;
-                this.marcaSearch = `?marca=${marcaVariation}`;
-                
-              }else if(modeloVariationFormatted.indexOf(term) !== -1 ){
-                term = modeloVariationInitial;
-
-                nameTermSearch = `/ ${term}`;
-                marcaVariation = marcaVariation.replaceAll(' ','-');
-
-                term = term.replaceAll(' ','-');
-
-                this.modeloSearch = `&modelo=${term}`;
-                this.marcaSearch = `?marca=${marcaVariation}`;
+              //se array nao for vazio 
+              if( variation.specifications.modelo.length > 0){
+                modeloVariation = variation.specifications.modelo[0].text;
               }
+              if(variation.specifications.marca_do_aparelho.length > 0){
+                marcaVariation = variation.specifications.marca_do_aparelho[0].text;
+                modeloVariation = modeloVariation.toLowerCase();
+              }
+              if(variation.specifications.colors !== undefined){
+                
+                if(variation.specifications.colors.length > 0){
+                  variationColor = variation.specifications.colors[0].text;
+                  variationColor = variationColor.toLowerCase();
+                }
+              }
+
+              //se tem o nome do produto 
+              if(term.indexOf(nameProduct) !== -1 ){
+                listNomeProduto.nome = nameProduct;
+              }
+
+              //se tem o modelo ja seta a marca 
+              if(term.indexOf(modeloVariation) !== -1 ){
+                listNomeProduto.modelo = modeloVariation;
+                listNomeProduto.marca = marcaVariation;
+              }
+
+              //se tem a cor busca pela foto 
+              if(term.indexOf(variationColor) !== -1 ){
+                listNomeProduto.cor = variationColor;
+                
+                console.log('body.name', body.name)
+                console.log('body.pictures', body.pictures)
+  
+                body.pictures.map( function(product,index) {
+                  console.log('prod', product)
+
+                  let variationId = variation._id;
+
+                  console.log('variationId', variationId)
+                  console.log('product._id', product._id)
+
+                  if(product._id !== undefined){
+
+                    let skuId = product._id;
+                    
+                    if(skuId === variationId){
+                      listNomeProduto.foto = product.normal.url;
+                    }
+                  }
+                })
+              }
+
+
+              console.log('listNomeProduto', listNomeProduto)
             }
           })
         }
-  
       }    
 
-      return nameTermSearch;
+      return nameProduct;
        
     },
 
