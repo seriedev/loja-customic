@@ -1,8 +1,8 @@
-$(function () {
+
     $html =
     "*Pedidos finalizados até as 15h são enviados no mesmo dia com prazo de entrega no dia útil seguinte.<br/>*Pedidos finalizados após as 15h serão enviados no dia seguinte, com prazo de entrega de 2 dias úteis da data da compra.";
     $cookieName = "TimCampaign";
-
+    $untilTomorrow = false;
   // =====================
   // Contador de tempo restante
   // =====================
@@ -35,20 +35,22 @@ $(function () {
     }else{
       $string = $hourConnector+"<br><b class='green'>"+ $remainingHours +"h "+$remainingMinutes+"min</b>";
       $html = "Até Amanhã<br class='imutable'><span>Se pedir "+$string+"</span>";
+      $untilTomorrow = true;
     }
-
+    function setCookie(name, value, days) {
+      sessionStorage.setItem(name, value);
+    }
+    function getCookie(name) {
+      return sessionStorage.getItem(name);
+    }
+    function eraseCookie(name) {
+      sessionStorage.removeItem(name);
+    }
+    
   // =====================
   // Funções
   // =====================
-  function setCookie(name, value, days) {
-    sessionStorage.setItem(name, value);
-  }
-  function getCookie(name) {
-    return sessionStorage.getItem(name);
-  }
-  function eraseCookie(name) {
-    sessionStorage.removeItem(name);
-  }
+
   function changeSedex() {
 
     function defaultReplace() {
@@ -81,6 +83,9 @@ $(function () {
     observer.observe(elementToObserve, { childList: true,subtree : true });
   }
   
+$(function () {
+
+
   // =====================
   // Execs
   // =====================
@@ -103,29 +108,53 @@ $(function () {
   // Pagina de Pagamento
   if (getCookie($cookieName) != null) {
     if (window.location.href.indexOf("checkout") > 0) {
-      var checkExist = setInterval(function () {
-        if ($(".shipping-calculator__services .list-group").length > 0) {
-          setTimeout(() => {
-            var checkExist2 = setInterval(function () {
-                if ($(".shipping-calculator__services .list-group").length > 0) {
-                    const elementToObserve = $(".checkout__col.col-md-6:first-child")[0];
-                    const observer = new MutationObserver(function (mutations) {
-                      mutations.forEach(function (mutation) {
-                        // console.log(mutation.type);
-                        changeSedex();
-                      });
-                    });
-                    observer.observe(elementToObserve, { childList: true,subtree : true });
-                    clearInterval(checkExist2);
-                }
-            });
-          }, 2000);
+        console.log("É checkout");
+        var checkExist = setInterval(function () {
+          if ($(".checkout__shipping").length > 0) {
+            clearInterval(checkExist);
+            CheckoutSedex();
+          }
+        }, 100);
 
-          clearInterval(checkExist);
+        function CheckoutSedex() {
+          // console.log("Tabela existe");
+          const elementToObserve = $(".checkout__app")[0];
+          const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+
+
+              var checkExist = setInterval(function () {
+                if ($(".checkout__shipping").length > 0) {
+                  clearInterval(checkExist);
+                  MutationSedex();
+                }
+              }, 100);
+
+            });
+          });
+
+          observer.observe(elementToObserve, { childList: false,attributes:true,subtree : false });
+          
+
+
+
         }
-      }, 100);
+
+
+
     }
   }
+  if (window.location.href.indexOf("checkout") > 0) {
+    console.log9
+    var checkExist = setInterval(function () {
+      if ($(".checkout__shipping-method").length > 0) {
+        clearInterval(checkExist);
+        console.log("achou");
+
+      }
+    }, 100);
+  }
+
 
   // Limpa o cookie quando confirma o pedido
   if (window.location.href.indexOf("/confirmation/") > 0){
@@ -133,3 +162,28 @@ $(function () {
   }
 });
 
+// Valor na opção sedex quando carrega o checkout com uma opção selecionada
+var checkExist = setInterval(function () {
+  if ($(".checkout__shipping-method").length > 0) {
+    clearInterval(checkExist);
+    if (getCookie($cookieName) != null) {
+      if (window.location.href.indexOf("checkout") > 0) {
+        if ($(".checkout__shipping-method").length > 0) {
+          if ($(".checkout__shipping-method > small").text() == "SEDEX") {
+            $text = $untilTomorrow ? "Até amanha" : "2 dias uteis";
+            $(".checkout__shipping-method .shipping-line strong.mr-2").text($text);
+
+
+            $(".checkout__shipping .btn").click(function (e) { 
+              e.preventDefault();
+              setTimeout(() => {
+                changeSedex();
+                MutationSedex();
+              }, 500);
+            });
+          }
+        }
+      }
+    }
+  }
+}, 1000);

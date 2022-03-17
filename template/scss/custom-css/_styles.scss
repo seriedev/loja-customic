@@ -151,6 +151,10 @@
 #checkout .list-group-item-action[sedex-tim] {
   .shipping-line {
     margin-right: 30px;
+    .green{
+      margin-left: 5px;
+      display: inline-block;
+    }
     @media screen and (min-width: 768px) {
       width: 70%;
       br:not(.imutable){
