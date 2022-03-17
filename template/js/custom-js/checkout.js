@@ -107,12 +107,14 @@ $(function () {
   }
   // Pagina de Pagamento
   if (getCookie($cookieName) != null) {
-    if (window.location.href.indexOf("checkout") > 0) {
+    // if (window.location.href.indexOf("checkout") > 0) {
         console.log("É checkout");
         var checkExist = setInterval(function () {
           if ($(".checkout__shipping").length > 0) {
-            clearInterval(checkExist);
-            CheckoutSedex();
+            if (window.location.href.indexOf("checkout") > 0){
+              clearInterval(checkExist);
+              CheckoutSedex();
+            }
           }
         }, 100);
 
@@ -142,17 +144,7 @@ $(function () {
 
 
 
-    }
-  }
-  if (window.location.href.indexOf("checkout") > 0) {
-    console.log9
-    var checkExist = setInterval(function () {
-      if ($(".checkout__shipping-method").length > 0) {
-        clearInterval(checkExist);
-        console.log("achou");
-
-      }
-    }, 100);
+    // }
   }
 
 
