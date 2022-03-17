@@ -1,5 +1,5 @@
 {
-  "meta_title": "Customic: Capa para Celular e Smartphones - Customic Capas Especiais",
+  "meta_title": "Customic: Capa para Celular e Smartphone - Capas Especiais",
   "meta_description": "São mais de 10 anos inovando. Capas com Proteção Militar certificadas, Capa Biodegradável Seed® Eco Case, Capinhas personalizadas para iPhone e linha smartphone Android, películas e acessórios. Customic é a melhor capa do Brasil.",
   "sections": [
     {
@@ -7,43 +7,43 @@
       "autoplay": 4000,
       "slides": [
         {
+          "start": "2022-03-09T18:56:28.652Z",
+          "end": "2022-04-01T02:45:28.749Z",
+          "img": "/img/uploads/desk-promo-customic.png",
+          "alt": "Acima de R$ 150 Frete Grátis Brasil. Acima de R$ 299 Frete Grátis Brasil + 2 Brindes.",
+          "mobile_img": "/img/uploads/mobile-promo-customic.png"
+        },
+        {
           "start": "",
           "end": "",
           "img": "/img/uploads/customic-magsafe-1200x466-.jpg",
           "link": "https://customic.com.br/impactor-clear-magsafe-all",
-          "alt": "Impactor Clear MagSafe Customic",
-          "mobile_img": "/img/uploads/customic-magsafe-605x1000-.jpg"
+          "alt": "Capa Impactor Clear MagSafe Customic",
+          "mobile_img": "/img/uploads/mobile-banner-customic-0322-1.jpg"
         },
         {
           "start": "",
           "end": "",
           "img": "/img/uploads/customic-personalizadas-1200x466-.jpg",
           "link": "https://www.lab.customic.com.br/",
-          "mobile_img": "/img/uploads/customic-personalizadas-605x1000-.jpg"
+          "mobile_img": "/img/uploads/mobile-banner-customic-0322-2.jpg",
+          "alt": "Capa para Celular Personalizada Customic"
         },
         {
           "start": "2022-02-10T15:22:57.412Z",
           "end": "",
           "img": "/img/uploads/customic-ultra-1200x466-.jpg",
           "link": "https://customic.com.br/impactor-ultra-all",
-          "mobile_img": "/img/uploads/customic-ultra-605x1000-.jpg",
-          "alt": "Impactor Ultra Customic"
+          "mobile_img": "/img/uploads/mobile-banner-customic-0322-3.jpg",
+          "alt": "Capa Impactor Ultra Customic"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/anyconv.com__2.banner-desk-customic-antiblue.webp",
-          "mobile_img": "/img/uploads/2.banner-mobile-customic-antiblue.png",
+          "img": "/img/uploads/desk-banner-customic-0322-4.jpg",
+          "mobile_img": "/img/uploads/mobile-banner-customic-0322-4.jpg",
           "link": "/pelicula-antiblue-vidro-3d-customic",
-          "alt": "AntiBlueDez21"
-        },
-        {
-          "img": "/img/uploads/6.banner-desk-customic-seed.png",
-          "mobile_img": "/img/uploads/6.banner-mobile-customic-seed.png",
-          "link": "/seed-eco-case-antibacteria",
-          "alt": "SeedEcoAntibactDez21",
-          "start": "",
-          "end": ""
+          "alt": "Película Antiblue Vidro 3D Customic"
         }
       ],
       "full_width": true
@@ -75,16 +75,16 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/anyconv.com__banner-produtoscapas1.webp",
+          "img": "/img/uploads/anyconv.com__banner-categoria-customiccapas-iphone.webp",
           "link": "/todasascasesdeiphone/",
           "alt": "Capa Iphone",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtoscapas1_.webp"
+          "mobile_img": "/img/uploads/anyconv.com__banner-categoria-customiccapas-iphone.webp"
         },
         {
-          "img": "/img/uploads/anyconv.com__banner-produtos-android2.webp",
+          "img": "/img/uploads/anyconv.com__banner-categoria-customicandroid-cases.webp",
           "link": "/todos-modelos-de-android/",
           "alt": "Capa Android",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-android2__.webp"
+          "mobile_img": "/img/uploads/anyconv.com__banner-categoria-customicandroid-cases.webp"
         }
       ]
     },
@@ -92,16 +92,16 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/anyconv.com__banner-produtos-ipad3.webp",
-          "link": "/ipad-e-macbook/",
+          "img": "/img/uploads/anyconv.com__banner-categoria-customicpeliculas-de-protecao.webp",
+          "link": "https://customic.com.br/peliculas",
           "alt": "Capa Ipad",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-ipad3__.webp"
+          "mobile_img": "/img/uploads/anyconv.com__banner-categoria-customicpeliculas-de-protecao.webp"
         },
         {
-          "img": "/img/uploads/anyconv.com__banner-produtos-peliculas4.webp",
-          "link": "/u_10009",
+          "img": "/img/uploads/anyconv.com__banner-categoria-customicpopsockets.webp",
+          "link": "https://customic.com.br/popsockets",
           "alt": "Película de proteção para celular",
-          "mobile_img": "/img/uploads/anyconv.com__banner-produtos-peliculas4__.webp"
+          "mobile_img": "/img/uploads/anyconv.com__banner-categoria-customicpopsockets.webp"
         }
       ]
     },

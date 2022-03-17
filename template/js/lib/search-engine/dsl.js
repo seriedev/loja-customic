@@ -8,22 +8,13 @@ export default {
             visible: true
           }
         }
-      ],
-      // preference: in stock first
-      should: [
-        {
-          range: {
-            quantity: {
-              gt: 0
-            }
-          }
-        }
       ]
     }
   },
   sort: [
+    // available && quantity >= min_quantity
     {
-      available: {
+      in_stock: {
         order: 'desc'
       }
     },
