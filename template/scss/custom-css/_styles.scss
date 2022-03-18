@@ -2,6 +2,16 @@
 .footer address {
 color: #fff !important;
 }
+
+.product-card__pictures{
+  img{
+    height: 125px;
+    width: auto;
+    margin: 0 auto;
+    object-fit: cover;
+  } 
+}
+
 .footer {
   &__title, & a, & i, &__credits, & address {
     color: #fff;
@@ -14,6 +24,12 @@ color: #fff !important;
     }
   }
   background: #2b2938;
+}
+
+.product-card--small{
+  .product-card__name{
+    text-align: center;
+  }
 }
 
 @media  screen and (min-width: 1368px) {

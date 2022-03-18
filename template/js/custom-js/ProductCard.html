@@ -25,35 +25,21 @@
       <slot name="body">
         <a-link
           class="product-card__link"
-          :href="`/${body.slug}${marcaSearch}${modeloSearch}`"
+          :href="`/${body.slug}${marcaSearch}${modeloSearch}${corSearch}`"
           :title="name"
         >
           <slot name="header"/>
 
           <div class="product-card__pictures">
-            <template v-if="body.pictures && body.pictures.length">
-              <a-picture
-                class="product-card__picture"
-                v-for="(picture, index) in body.pictures.slice(0, 2).reverse()"
-                v-if="body.pictures.length === 1 || index === 1 || isHovered"
-                :key="index"
-                :src="picture"
-                :can-calc-height="false"
-              />
-            </template>
-            <a-picture
-              v-else
-              class="product-card__picture"
-            />
+            <img :src="`${isSearchingPhoneModel.foto}`" alt="">
           </div>
 
           <slot name="title">
             <component
               :is="headingTag"
               class="product-card__name"
-            >
-              
-              {{ isSearchingPhoneModel }}
+            >              
+              {{ name }} {{ isSearchingPhoneModel.specifictions }}
             </component>
           </slot>
         </a-link>

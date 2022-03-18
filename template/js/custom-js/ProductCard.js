@@ -83,6 +83,8 @@ export default {
       body: {},
       modeloSearch: "",
       marcaSearch: "",
+      corSearch: "",
+      fotoSearch: "",
       isLoading: false,
       isWaitingBuy: false,
       isHovered: false,
@@ -101,16 +103,18 @@ export default {
       let nameProduct = this.body.name;
       let getListModels = this.body.variations;
       let term = this.searchTerm;
-      let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: ""};
-      
-      //console.log('this.body.name', this.body.name)
-      //console.log('this.body', this.body)
+      let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
+
+      //setando foto default 
+      body.pictures.map( function(product, index) {
+        if(index === 0){
+          listNomeProduto.foto = product.normal.url;
+        }
+      })
       
       if(term !== undefined){
         term = term.toLowerCase();
         nameProduct = nameProduct.toLowerCase();
-
-        console.log('getListModels',getListModels)
   
         if(getListModels !== undefined){
 
@@ -133,56 +137,74 @@ export default {
                 
                 if(variation.specifications.colors.length > 0){
                   variationColor = variation.specifications.colors[0].text;
-                  variationColor = variationColor.toLowerCase();
+                  variationColor = variationColor.toLowerCase(); 
                 }
               }
 
               //se tem o nome do produto 
               if(term.indexOf(nameProduct) !== -1 ){
+                nameProduct = nameProduct.charAt(0).toUpperCase() + nameProduct.slice(1)
                 listNomeProduto.nome = nameProduct;
               }
 
               //se tem o modelo ja seta a marca 
               if(term.indexOf(modeloVariation) !== -1 ){
+                modeloVariation = modeloVariation.charAt(0).toUpperCase() + modeloVariation.slice(1)
+
+                if(modeloVariation.indexOf('Iphone') !== -1){
+                  modeloVariation = modeloVariation.replaceAll('Iphone','iPhone');
+                }
+
                 listNomeProduto.modelo = modeloVariation;
                 listNomeProduto.marca = marcaVariation;
               }
 
               //se tem a cor busca pela foto 
               if(term.indexOf(variationColor) !== -1 ){
+                variationColor = variationColor.charAt(0).toUpperCase() + variationColor.slice(1)
                 listNomeProduto.cor = variationColor;
-                
-                console.log('body.name', body.name)
-                console.log('body.pictures', body.pictures)
-  
+                                
                 body.pictures.map( function(product,index) {
-                  console.log('prod', product)
 
-                  let variationId = variation._id;
-
-                  console.log('variationId', variationId)
-                  console.log('product._id', product._id)
+                  let variationPictureId = variation.picture_id;
 
                   if(product._id !== undefined){
 
                     let skuId = product._id;
                     
-                    if(skuId === variationId){
+                    if(skuId === variationPictureId){
                       listNomeProduto.foto = product.normal.url;
                     }
                   }
                 })
               }
-
-
-              console.log('listNomeProduto', listNomeProduto)
             }
           })
         }
       }    
 
-      return nameProduct;
-       
+      if(listNomeProduto.cor !== ""){
+        listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo} / ${listNomeProduto.cor}`;
+        this.marcaSearch = `?marca=${listNomeProduto.marca}`;
+
+        let listNomeProdutoModelo = listNomeProduto.modelo.replaceAll(' ','-');
+
+        this.modeloSearch = `&modelo=${listNomeProdutoModelo}`;
+        this.corSearch = `&cor=${listNomeProduto.cor}`;
+      }else if(listNomeProduto.modelo !== ""){
+        listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo}`;
+        this.marcaSearch = `?marca=${listNomeProduto.marca}`;
+
+        let listNomeProdutoModelo = listNomeProduto.modelo.replaceAll(' ','-');
+
+        this.modeloSearch = `&modelo=${listNomeProdutoModelo}`;
+      }else if(listNomeProduto.marca !== ""){
+        listNomeProduto.specifictions = ` / ${listNomeProduto.marca}`; 
+        this.marcaSearch = `?marca=${listNomeProduto.marca}`;
+      }
+
+      return listNomeProduto;
+
     },
 
     ratingHtml () {
@@ -314,5 +336,5 @@ export default {
     if (!this.isLoaded) {
       this.fetchItem()
     }
-  }
+  },
 }

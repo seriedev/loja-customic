@@ -70,12 +70,20 @@ export default {
     changeVariationURL(){
       let marcaSelected = this.selectedOptions.marca_do_aparelho;
       let modeloSelected = this.selectedOptions.modelo;
+      let corSelected = this.selectedOptions.colors;
+      let url = "";
 
       if(marcaSelected !== undefined && modeloSelected !== undefined){
 
         modeloSelected = modeloSelected.replaceAll(' ','-');
+        corSelected = corSelected.replaceAll(' ','-');
 
-        let url = `?marca=${marcaSelected}&modelo=${modeloSelected}`;  
+        if(corSelected !== undefined){
+          url = `?marca=${marcaSelected}&modelo=${modeloSelected}&cor=${corSelected}`;  
+        }else{
+          url = `?marca=${marcaSelected}&modelo=${modeloSelected}`;  
+        }
+
         window.history.pushState("object or string", "", `${url}`);
       }
 
@@ -97,6 +105,14 @@ export default {
       modeloParam = modeloParam.replaceAll('-',' ');
  
       this.$nextTick(() => this.selectOption(modeloParam, gridTypeModelo, indexModelo));
+
+      let corParam = getParam.get('cor');
+      let gridTypeCor = "colors";
+      let indexCor = 2; 
+
+      corParam = corParam.replaceAll('-',' ');
+ 
+      this.$nextTick(() => this.selectOption(corParam, gridTypeCor, indexCor));
 
       this.changeVariationURL();
     },
