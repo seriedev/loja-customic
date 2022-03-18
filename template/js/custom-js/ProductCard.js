@@ -183,14 +183,20 @@ export default {
         }
       }    
 
-      if(listNomeProduto.cor !== ""){
+      if(listNomeProduto.cor !== "" && listNomeProduto.modelo !== ""){
         listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo} / ${listNomeProduto.cor}`;
+
         this.marcaSearch = `?marca=${listNomeProduto.marca}`;
 
         let listNomeProdutoModelo = listNomeProduto.modelo.replaceAll(' ','-');
-
         this.modeloSearch = `&modelo=${listNomeProdutoModelo}`;
         this.corSearch = `&cor=${listNomeProduto.cor}`;
+
+      }
+      else if(listNomeProduto.cor !== ""){
+        listNomeProduto.specifictions = ` / ${listNomeProduto.cor}`;
+        this.corSearch = `&cor=${listNomeProduto.cor}`;
+
       }else if(listNomeProduto.modelo !== ""){
         listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo}`;
         this.marcaSearch = `?marca=${listNomeProduto.marca}`;
@@ -198,6 +204,7 @@ export default {
         let listNomeProdutoModelo = listNomeProduto.modelo.replaceAll(' ','-');
 
         this.modeloSearch = `&modelo=${listNomeProdutoModelo}`;
+
       }else if(listNomeProduto.marca !== ""){
         listNomeProduto.specifictions = ` / ${listNomeProduto.marca}`; 
         this.marcaSearch = `?marca=${listNomeProduto.marca}`;
