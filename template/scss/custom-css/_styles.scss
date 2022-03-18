@@ -123,6 +123,17 @@
   }
 }
 //
+.list-group .shipping-calculator__option{
+  .shipping-line>strong{
+    min-width: 110px;
+  }
+  > small {
+    position: absolute;
+    right: -11px;
+    top: 3px;
+  }
+}
+
 .list-group-item-action[sedex-tim] {
   .shipping-calculator__option {
     .shipping-line {
