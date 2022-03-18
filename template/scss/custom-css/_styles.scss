@@ -128,9 +128,12 @@
     min-width: 110px;
   }
   > small {
-    position: absolute;
-    right: -11px;
-    top: 3px;
+    @media screen and (min-width: 1200px) {
+      position: absolute;
+      right: -11px;
+      top: 3px;
+    }
+
   }
 }
 
@@ -139,6 +142,9 @@
     .shipping-line {
       display: flex;
       align-items: baseline;
+      @media screen and (max-width: 1200px) {
+        flex-wrap: wrap;
+      }
       > strong.mr-2 {
         max-width: 100%;
         @media screen and (min-width: 768px) {
@@ -175,5 +181,7 @@
   }
 }
 #cart .list-group-item-action[sedex-tim] .shipping-line {
-  margin-right: 40px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 40px;
+  }
 }

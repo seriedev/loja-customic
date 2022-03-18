@@ -25,7 +25,7 @@
     $hourConnector = $remainingHours > 1 ? "nas próximas" : "na próxima";
     // =======================
 
-    if (now.getHours() >= 15 && now.getMinutes() > 0) {
+    if (now.getHours() > 14 && now.getMinutes() > 0) {
       let tomorrow = new Date()
       tomorrow.setDate(now.getDate() + 1);
       tomorrow.setHours(15,0,0,0);
@@ -80,7 +80,9 @@
         changeSedex();
       });
     });
-    observer.observe(elementToObserve, { childList: true,subtree : true });
+    if (elementToObserve != undefined) {
+      observer.observe(elementToObserve, { childList: true,subtree : true });
+    }
   }
   
 $(function () {
