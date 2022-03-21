@@ -75,10 +75,11 @@ export default {
 
       if(marcaSelected !== undefined && modeloSelected !== undefined){
 
-        modeloSelected = modeloSelected.replaceAll(' ','-');
-        corSelected = corSelected.replaceAll(' ','-');
-
+        modeloSelected = modeloSelected.replaceAll(' ','-');  
+        
         if(corSelected !== undefined){
+          corSelected = corSelected.replaceAll(' ','-');
+
           url = `?marca=${marcaSelected}&modelo=${modeloSelected}&cor=${corSelected}`;  
         }else{
           url = `?marca=${marcaSelected}&modelo=${modeloSelected}`;  

@@ -124,10 +124,12 @@ export default {
               let modeloVariation = "";
               let marcaVariation = "";
               let variationColor = "";
+              let modeloVariationInitial = "";
 
               //se array nao for vazio 
               if( variation.specifications.modelo.length > 0){
                 modeloVariation = variation.specifications.modelo[0].text;
+                modeloVariationInitial = variation.specifications.modelo[0].text;
               }
               if(variation.specifications.marca_do_aparelho.length > 0){
                 marcaVariation = variation.specifications.marca_do_aparelho[0].text;
@@ -155,7 +157,7 @@ export default {
                   modeloVariation = modeloVariation.replaceAll('Iphone','iPhone');
                 }
 
-                listNomeProduto.modelo = modeloVariation;
+                listNomeProduto.modelo = modeloVariationInitial;
                 listNomeProduto.marca = marcaVariation;
               }
 
