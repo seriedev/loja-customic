@@ -1,0 +1,416 @@
+<section class="search-engine">
+  <a-backdrop :is-visible.sync="isAsideVisible"/>
+
+  <transition
+    enter-active-class="animated slideInRight"
+    leave-active-class="animated slideOutRight"
+  >
+    <aside
+      class="search-engine__aside card shadow"
+      v-show="isAsideVisible"
+    >
+      <slot name="filters">
+        <header class="card-header">
+          {{ i19refineSearch }}
+          <button
+            type="button"
+            class="close"
+            :aria-label="i19closeFilters"
+            @click="toggleFilters"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </header>
+
+        <div
+          class="card-body"
+          :key="searchFilterId"
+        >
+          <div
+            v-if="hasSetPriceRange || priceOptions.length"
+            class="search-engine__filter search-engine__filter--price"
+          >
+            <h5>{{ i19price }}</h5>
+            <a
+              v-if="hasSetPriceRange"
+              href="#"
+              class="btn btn-link btn-sm mb-2"
+              @click.prevent="setPriceRange()"
+            >
+              <i class="i-arrow-left mr-1"></i>
+              {{ i19all }}
+            </a>
+
+            <div
+              class="search-engine__option custom-control custom-radio"
+              v-for="({ label, min, max }, index) in priceOptions"
+              :key="`Price-${index}`"
+            >
+              <input
+                type="radio"
+                class="custom-control-input"
+                name="price-option"
+                :id="`Price-${index}`"
+                @click="setPriceRange(min, max)"
+              >
+              <label
+                class="custom-control-label"
+                :for="`Price-${index}`"
+              >
+                {{ label }}
+              </label>
+            </div>
+
+            <div
+              v-if="priceRange.max - priceRange.min > 2"
+              class="search-engine__option-range input-group input-group-sm mt-2"
+            >
+              <input
+                ref="inputMinPrice"
+                type="text"
+                class="form-control"
+                aria-describedby="search-engine-price-range"
+                :aria-label="`Min ${i19price}`"
+                :placeholder="`Min: ${Math.floor(priceRange.min)}`"
+              >
+              <input
+                ref="inputMaxPrice"
+                type="text"
+                class="form-control"
+                aria-label="Max"
+                aria-describedby="search-engine-price-range"
+                :aria-label="`Max ${i19price}`"
+                :placeholder="`Max: ${Math.ceil(priceRange.max)}`"
+              >
+              <div class="input-group-append">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="search-engine-price-range"
+                  @click="handlePriceInputs()"
+                >
+                  <i class="i-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            v-for="({ filter, options, isSpec }, i) in filters"
+            v-if="options.length"
+            :key="`filters-${filter}`"
+            class="search-engine__filter"
+            :class="`search-engine__filter--${filter}`"
+          >
+            <template v-once>
+              <button
+                class="btn text-truncate"
+                type="button"
+                data-toggle="collapse"
+                :data-target="`#collapse-${filter}`"
+                :aria-expanded="i < 5 ? 'true' : 'false'"
+                :aria-controls="`collapse-${filter}`"
+              >
+                <i class="i-chevron-down"></i><i class="i-chevron-up"></i>
+                {{ getFilterLabel(filter) }}
+              </button>
+
+              <div
+                class="collapse"
+                :class="i < 5 ? 'show' : null"
+                :id="`collapse-${filter}`"
+              >
+                <div
+                  class="search-engine__option custom-control custom-checkbox"
+                  v-for="(opt, index) in options"
+                  :key="`${filter}-${index}`"
+                >
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    :id="`${filter}-${index}`"
+                    @change="ev => setFilterOption(filter, opt.key, ev.target.checked)"
+                    :checked="selectedOptions[filter].indexOf(opt.key) > -1"
+                  >
+                  <label
+                    class="custom-control-label"
+                    :for="`${filter}-${index}`"
+                  >
+                    {{ opt.key }}
+                    <small v-if="!isSpec">({{ opt.doc_count }})</small>
+                  </label>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <button
+            class="btn btn-sm btn-block btn-outline-secondary"
+            type="button"
+            @click="clearFilters"
+          >
+            <span class="mr-1">
+              <i class="i-trash"></i>
+            </span>
+            {{ i19clearFilters }}
+          </button>
+        </footer>
+      </slot>
+    </aside>
+  </transition>
+
+  <transition
+    enter-active-class="animated fadeInRight slower"
+    leave-active-class="animated fadeOutRight"
+  >
+    <button
+      v-if="isNavVisible && hasFilters"
+      class="search-engine__aside-open btn btn-secondary"
+      @click="toggleFilters(true)"
+      type="button"
+      :aria-label="i19filterResults"
+      :disabled="isSearching"
+    >
+      <span
+        v-if="isSearching"
+        class="spinner-border spinner-border-sm"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </span>
+      <span v-else>
+        <span class="d-none d-md-inline">
+          <i class="i-search"></i>
+        </span>
+        <i class="i-filter"></i>
+      </span>
+    </button>
+  </transition>
+
+  <transition
+    enter-active-class="animated fadeInDown"
+    leave-active-class="animated fadeOutUp fast position-absolute"
+  >
+    <div
+      v-if="isNavVisible"
+      class="search-engine__nav"
+    >
+      <div class="container">
+        <slot
+          name="nav"
+          v-bind="{ totalSearchResults, toggleFilters }"
+        >
+          <div class="search-engine__count">
+            <strong>{{ totalSearchResults }}</strong>
+            {{ i19itemsFound }}
+            <div
+              v-if="isSearching"
+              class="search-engine__spinner spinner-grow"
+              role="status"
+            >
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+
+          <div
+            v-if="isFilterable"
+            class="search-engine__toggles"
+          >
+            <button
+              v-if="hasFilters"
+              class="btn btn-light"
+              @click="toggleFilters(true)"
+              type="button"
+            >
+              <i class="i-filter mr-1"></i>
+              <span class="d-none d-md-inline-block">
+                {{ i19filterResults }}
+              </span>
+              <span class="d-md-none">
+                {{ i19filter }}
+              </span>
+            </button>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-light"
+                type="button"
+                id="search-engine-sort"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="i-sort mr-1"></i>
+                {{ i19sort }}
+              </button>
+
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="search-engine-sort"
+              >
+                <a
+                  v-for="({ value, label }, index) in sortOptions"
+                  :key="`sort-${index}`"
+                  class="dropdown-item"
+                  :class="`search-engine__sort--${value}`"
+                  href="#"
+                  @click.prevent="setSortOrder(value)"
+                  :active="selectedSortOption === value"
+                >
+                  {{ label }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </slot>
+      </div>
+    </div>
+  </transition>
+
+  <transition enter-active-class="animated fadeIn slower">
+    <div
+      class="search-engine__results fade"
+      :style="{ opacity: isSearching && !isLoadingMore ? 0.4 : 1 }"
+      v-if="isResultsVisible"
+    >
+      <div class="container">
+        <div class="search-engine__info px-lg-4">
+          <template v-if="term">
+            <div
+              v-if="hasEmptyResult"
+              class="search-engine__no-results"
+            >
+              <div class="lead mb-2">
+                <span v-if="suggestedTerm">
+                  {{ i19didYouMean }}
+                  <a
+                    href="#"
+                    @click.prevent="$emit('update:term', suggestedTerm)"
+                    v-text="suggestedTerm"
+                  ></a>
+                  ?
+                </span>
+                {{ i19noResultsFor }}
+                <em>{{ term }}</em>
+              </div>
+              <h4 v-if="popularItems.length">
+                {{ i19popularProducts }}
+              </h4>
+            </div>
+
+            <div
+              v-else
+              class="search-engine__terms"
+            >
+              <span
+                v-if="noResultsTerm"
+                class="d-none d-lg-inline"
+              >
+                {{ i19noResultsFor }}
+                <s>{{ noResultsTerm }}</s>.
+              </span>
+              <span class="d-none d-md-inline">
+                {{ i19searchingFor }}:
+              </span>
+              <h1>{{ term }}</h1>
+            </div>
+          </template>
+
+          <h3 v-else-if="hasEmptyResult && popularItems.length">
+            {{ i19popularProducts }}
+          </h3>
+
+          <transition
+            enter-active-class="animated fadeInDown"
+            leave-active-class="animated fadeOutUp"
+          >
+            <div v-if="hasSelectedOptions && isFilterable">
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                type="button"
+                @click="clearFilters"
+              >
+                <i class="i-trash mr-1"></i>
+                {{ i19clearFilters }}
+              </button>
+
+              <template v-for="(options, filter) in selectedOptions">
+                <button
+                  class="search-engine__selected btn btn-sm btn-light"
+                  type="button"
+                  v-for="option in options"
+                  @click="setFilterOption(filter, option, false)"
+                >
+                  <i class="i-times mr-1"></i>
+                  {{ option }}
+                  <small>{{ getFilterLabel(filter) }}</small>
+                </button>
+              </template>
+            </div>
+          </transition>
+        </div>
+
+        <article
+          v-if="canShowItems"
+          class="search-engine__retail"
+        >
+          <div class="row">
+            <div
+              class="col-6 col-md-4 col-lg-3"
+              v-for="product in suggestedItems"
+              :key="product._id"
+            >
+              <slot
+                name="product-card"
+                v-bind="{ product }"
+              >
+                <product-card
+                  class="search-engine__item uvaa"
+                  v-bind="productCardProps"
+                  :product="product"
+                  :searchTerm="term"
+                />
+              </slot>
+            </div>
+          </div>
+        </article>
+
+        <transition enter-active-class="animated fadeInDown">
+          <div
+            class="alert alert-warning"
+            role="alert"
+            v-if="hasNetworkError"
+          >
+            <i class="i-wifi mr-2"></i>
+            {{ i19searchOfflineErrorMsg }}
+            <a
+              href="#"
+              class="alert-link"
+              @click.prevent="fetchItems"
+            >
+              {{ i19searchAgain }}
+            </a>
+          </div>
+        </transition>
+      </div>
+    </div>
+  </transition>
+
+  <transition leave-active-class="animated fadeOut">
+    <slot v-if="!hasSearched || isLoadingMore"/>
+  </transition>
+
+  <component
+    :is="loadMoreSelector ? 'portal' : 'div'"
+    :selector="loadMoreSelector"
+  >
+    <div
+      v-if="resultItems.length < totalSearchResults"
+      :key="lastRequestId"
+      id="search-engine-load-more"
+      style="width: 100%; margin-top: 20px; height: 5px"
+    ></div>
+  </component>
+</section>
