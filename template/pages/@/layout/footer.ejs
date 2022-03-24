@@ -55,13 +55,6 @@ const contacts = _.cms('contacts') || {}
                 </a>
               </li>
             <% } %>
-            <% if (footer.contacts.address) { %>
-              <li>
-                <address>
-                  <%= contacts.address %>
-                </address>
-              </li>
-            <% } %>
           </ul>
 
           <% if (footer.contacts.socials) { %>
@@ -69,6 +62,9 @@ const contacts = _.cms('contacts') || {}
               <%- await include('@/layout/inc/networks', { _, contacts }) %>
             </p>
           <% } %>
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v13.0&appId=167752976907076&autoLogAppEvents=1" nonce="oc5AFq9K"></script>
+          <div class="fb-page" data-href="https://www.facebook.com/Customic/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Customic/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Customic/">Customic</a></blockquote></div>
         </div>
       </div>
 
@@ -185,6 +181,16 @@ const contacts = _.cms('contacts') || {}
             <a href="https://seriedesign.com.br/"><img class="lozad"  src="/img/uploads/logo-serie-white.svg" alt="Seri.e Design"></a>
           </div>
         </div>
+        <% if (footer.contacts.address) { %>
+          <div>
+            <address>
+              Onde estamos:<br>
+              Matriz: Rua Sérgio Jungblut Dieterich, 900/18 - Porto Alegre - RS, 91610-410<br>
+              Av. Setecentos Quadra 012, Lote M05 E M06 - Serra - ES, 29161-414 <br>
+              Av. Helio Ossamu Daikuara, 1445 - Embu Das Artes - São Paulo - SP, 06807-000 <br>
+            </address>
+          </div>
+        <% } %>
       </div>
     </div>
 
