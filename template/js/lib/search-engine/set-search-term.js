@@ -5,6 +5,8 @@ export default (self, term) => {
     switch (word) {
       case 'iphone':
         return 'iPhone'
+      case '8':
+        return '7/8'
       case 'x':
       case 'x/xs':
         return 'X/XS'
@@ -44,7 +46,7 @@ export default (self, term) => {
                   terms: {
                     'specs.text': [
                       words.join(' ').replace(/(samsung|apple|motorola|lg|xiaomi|huawei)\s/ig, ''),
-                      ...words
+                      ...words.filter(word => word.length > 1)
                     ]
                   }
                 }
