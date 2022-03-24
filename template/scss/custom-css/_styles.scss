@@ -141,3 +141,66 @@ color: #fff !important;
     }
   }
 }
+//
+.list-group .shipping-calculator__option{
+  .shipping-line>strong{
+    min-width: 110px;
+  }
+  > small {
+    @media screen and (min-width: 1200px) {
+      position: absolute;
+      right: -11px;
+      top: 3px;
+    }
+
+  }
+}
+
+.list-group-item-action[sedex-tim] {
+  .shipping-calculator__option {
+    .shipping-line {
+      display: flex;
+      align-items: baseline;
+      @media screen and (max-width: 1200px) {
+        flex-wrap: wrap;
+      }
+      > strong.mr-2 {
+        max-width: 100%;
+        @media screen and (min-width: 768px) {
+          width: 70%;
+        }
+      }
+    }
+  }
+  .green{
+    font-weight: 500;
+    color: green;
+  }
+  &.active{
+    .green{
+      color: white;
+    }
+  }
+}
+
+
+#checkout .list-group-item-action[sedex-tim] {
+  .shipping-line {
+    margin-right: 30px;
+    .green{
+      margin-left: 5px;
+      display: inline-block;
+    }
+    @media screen and (min-width: 768px) {
+      width: 70%;
+      br:not(.imutable){
+        display: none;
+      }
+    }
+  }
+}
+#cart .list-group-item-action[sedex-tim] .shipping-line {
+  @media screen and (min-width: 1200px) {
+    margin-right: 40px;
+  }
+}
