@@ -100,21 +100,23 @@ export default {
 
     isSearchingPhoneModel (){
       let body = this.body;
-      let nameProduct = this.body.name;
       let getListModels = this.body.variations;
       let term = this.searchTerm;
-      let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
+      let listNomeProduto = { modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
 
       //setando foto default 
       body.pictures.map( function(product, index) {
+                
         if(index === 0){
-          listNomeProduto.foto = product.normal.url;
+
+          if(product.normal !== undefined){
+            listNomeProduto.foto = product.normal.url;
+          }
         }
       })
       
       if(term !== undefined){
         term = term.toLowerCase();
-        nameProduct = nameProduct.toLowerCase();
   
         if(getListModels !== undefined){
 
@@ -126,7 +128,7 @@ export default {
               let variationColor = "";
               let modeloVariationInitial = "";
 
-              //se array nao for vazio 
+              //se array nao for vazio setando variações em variaveis para comparação
               if( variation.specifications.modelo.length > 0){
                 modeloVariation = variation.specifications.modelo[0].text;
                 modeloVariationInitial = variation.specifications.modelo[0].text;
@@ -136,32 +138,18 @@ export default {
                 modeloVariation = modeloVariation.toLowerCase();
               }
               if(variation.specifications.colors !== undefined){
-                
                 if(variation.specifications.colors.length > 0){
                   variationColor = variation.specifications.colors[0].text;
                   variationColor = variationColor.toLowerCase(); 
                 }
               }
 
-              //se tem o nome do produto 
-              if(term.indexOf(nameProduct) !== -1 ){
-                nameProduct = nameProduct.charAt(0).toUpperCase() + nameProduct.slice(1)
-                listNomeProduto.nome = nameProduct;
-              }
-
-              //se tem o modelo ja seta a marca 
+              
               if(term.indexOf(modeloVariation) !== -1 ){
-                modeloVariation = modeloVariation.charAt(0).toUpperCase() + modeloVariation.slice(1)
-
-                if(modeloVariation.indexOf('Iphone') !== -1){
-                  modeloVariation = modeloVariation.replaceAll('Iphone','iPhone');
-                }
-
                 listNomeProduto.modelo = modeloVariationInitial;
                 listNomeProduto.marca = marcaVariation;
               }
 
-              //se tem a cor busca pela foto 
               if(term.indexOf(variationColor) !== -1 ){
                 variationColor = variationColor.charAt(0).toUpperCase() + variationColor.slice(1)
                 listNomeProduto.cor = variationColor;
@@ -175,7 +163,10 @@ export default {
                     let skuId = product._id;
                     
                     if(skuId === variationPictureId){
-                      listNomeProduto.foto = product.normal.url;
+
+                      if(product.normal !== undefined){
+                        listNomeProduto.foto = product.normal.url;
+                      }
                     }
                   }
                 })
@@ -185,21 +176,29 @@ export default {
         }
       }    
 
-      if(listNomeProduto.cor !== "" && listNomeProduto.modelo !== ""){
-        listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo} / ${listNomeProduto.cor}`;
 
+      if(listNomeProduto.cor !== ""){
+        listNomeProduto.specifictions = ` / ${listNomeProduto.cor}`;
+        this.corSearch = `?cor=${listNomeProduto.cor}`;
+      }
+
+      if(listNomeProduto.marca !== ""){
+        listNomeProduto.specifictions = ` / ${listNomeProduto.marca}`; 
         this.marcaSearch = `?marca=${listNomeProduto.marca}`;
+      }
 
+      if(listNomeProduto.cor !== "" && listNomeProduto.modelo !== ""){
+        
+        this.marcaSearch = `?marca=${listNomeProduto.marca}`;
+        
         let listNomeProdutoModelo = listNomeProduto.modelo.replaceAll(' ','-');
         this.modeloSearch = `&modelo=${listNomeProdutoModelo}`;
         this.corSearch = `&cor=${listNomeProduto.cor}`;
 
-      }
-      else if(listNomeProduto.cor !== ""){
-        listNomeProduto.specifictions = ` / ${listNomeProduto.cor}`;
-        this.corSearch = `&cor=${listNomeProduto.cor}`;
+        listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo} / ${listNomeProduto.cor}`;
 
-      }else if(listNomeProduto.modelo !== ""){
+      }
+      else if(listNomeProduto.modelo !== ""){
         listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo}`;
         this.marcaSearch = `?marca=${listNomeProduto.marca}`;
 
@@ -207,9 +206,6 @@ export default {
 
         this.modeloSearch = `&modelo=${listNomeProdutoModelo}`;
 
-      }else if(listNomeProduto.marca !== ""){
-        listNomeProduto.specifictions = ` / ${listNomeProduto.marca}`; 
-        this.marcaSearch = `?marca=${listNomeProduto.marca}`;
       }
 
       return listNomeProduto;
