@@ -3,7 +3,17 @@
 color: #fff !important;
 }
 
+.product-card__prices{
+  @media (max-width: 1024px){
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 .product-card__pictures{
+  height: 250px!important;
+
   img{
     height: 125px;
     width: auto;
