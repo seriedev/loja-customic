@@ -106,9 +106,10 @@ export default {
       let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
 
       //setando foto default 
+      console.log('estou setando a foto')
       body.pictures.map( function(product, index) {
         if(index === 0){
-          listNomeProduto.foto = product.normal.url;
+          listNomeProduto.foto = (product.normal || product.zoom).url;
         }
       })
       
@@ -163,6 +164,8 @@ export default {
 
               //se tem a cor busca pela foto 
               if(term.indexOf(variationColor) !== -1 ){
+                console.log('estou na pesquisa')
+                console.log(term)
                 variationColor = variationColor.charAt(0).toUpperCase() + variationColor.slice(1)
                 listNomeProduto.cor = variationColor;
                                 
@@ -175,7 +178,7 @@ export default {
                     let skuId = product._id;
                     
                     if(skuId === variationPictureId){
-                      listNomeProduto.foto = product.normal.url;
+                      listNomeProduto.foto = (product.normal || product.zoom).url;
                     }
                   }
                 })
