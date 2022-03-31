@@ -74,14 +74,22 @@
     }
   }
   function MutationSedex() {
-    const elementToObserve = $(".shipping-calculator__services")[0];
+    let elementToObserve = $(".shipping-calculator__services")[0];
+    let configs = { childList: true,subtree : true };
+    if (window.location.href.toUpperCase().indexOf("CHECKOUT") > 0) {
+       elementToObserve = $(".col .checkout > span")[0];
+       configs = { childList: true,subtree : false };
+    }
     const observer = new MutationObserver(function (mutations) {
       mutations.forEach(function (mutation) {
         changeSedex();
       });
     });
     if (elementToObserve != undefined) {
-      observer.observe(elementToObserve, { childList: true,subtree : true });
+      observer.observe(elementToObserve, configs);
+      if (window.location.href.toUpperCase().indexOf("CHECKOUT") > 0) {
+        observer.disconnect;
+      }
     }
   }
   
@@ -93,24 +101,27 @@ $(function () {
   // =====================
   // Pagina de carrinho
   if (window.location.href.indexOf("utm_campaign=tim1") > 0 || getCookie($cookieName) != null) {
-    setCookie($cookieName, "true", 1);
-//    console.log("Phase 1");
-    if ($("#spa").length > 0) {
-//      console.log("Phase 2");
-      if ($(".shipping-calculator__services")[0] === undefined) {
-//        console.log("Phase 2.3");
-        var checkExist = setInterval(function () {
-          if ($(".shipping-calculator__services").length) {
-            clearInterval(checkExist);
-//            console.log("Phase 2.4");
-            MutationSedex();
+    if (window.location.href.toUpperCase().indexOf("CHECKOUT") < 0) {
+      setCookie($cookieName, "true", 1);
+      //    console.log("Phase 1");
+          if ($("#spa").length > 0) {
+      //      console.log("Phase 2");
+            if ($(".shipping-calculator__services")[0] === undefined) {
+      //        console.log("Phase 2.3");
+              var checkExist = setInterval(function () {
+                if ($(".shipping-calculator__services").length) {
+                  clearInterval(checkExist);
+      //            console.log("Phase 2.4");
+                  MutationSedex();
+                }
+              }, 100);
+            } else {
+      //        console.log("Phase 2.2");
+              MutationSedex();
+            }
           }
-        }, 100);
-      } else {
-//        console.log("Phase 2.2");
-        MutationSedex();
-      }
     }
+
   }
   // Pagina de Pagamento
   if (getCookie($cookieName) != null) {
