@@ -74,14 +74,19 @@
     }
   }
   function MutationSedex() {
-    const elementToObserve = $(".shipping-calculator__services")[0];
+    let elementToObserve = $(".shipping-calculator__services")[0];
+    let configs = { childList: true,subtree : true };
+    if (window.location.href.toUpperCase().indexOf("CHECKOUT") > 0) {
+       elementToObserve = $(".col .checkout > span")[0];
+       configs = { childList: true,subtree : false };
+    }
     const observer = new MutationObserver(function (mutations) {
       mutations.forEach(function (mutation) {
         changeSedex();
       });
     });
     if (elementToObserve != undefined) {
-      observer.observe(elementToObserve, { childList: true,subtree : true });
+      observer.observe(elementToObserve, configs);
       if (window.location.href.toUpperCase().indexOf("CHECKOUT") > 0) {
         observer.disconnect;
       }
