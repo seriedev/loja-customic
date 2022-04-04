@@ -11,17 +11,21 @@ color: #fff !important;
   }
 }
 
+.product-card__pictures img{
+  max-height: unset;
+}
+
+.product-card{
+  padding-bottom: 38px;
+}
+
 .product-card__pictures{
-  height: 250px!important;
+  width: 100%;
+  height: auto!important;
 
   img{
-    max-height: 180px;
-    @media(min-width: 767px) {
-      max-height: 250px;
-    }
-    width: auto;
-    margin: 0 auto;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
   } 
 }
 
@@ -45,8 +49,9 @@ color: #fff !important;
   }
 }
 
-@media  screen and (min-width: 1368px) {
-
+.product-card--small .product-card__name{
+  --max-lines: 3;
+  height: 58px;
 }
 
 //desktop normal size
