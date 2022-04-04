@@ -4,16 +4,19 @@ color: #fff !important;
 }
 
 .product-card__pictures{
-  img{
+  img {
     max-height: 180px;
-    @media(min-width: 767px) {
-      max-height: 250px;
-    }
     width: auto;
     margin: 0 auto;
     object-fit: cover;
-  } 
+    @media(min-width: 767px) {
+     max-height: 250px !important;
+    }
+  }
+  
 }
+
+
 
 .footer {
   &__title, & a, & i, &__credits, & address {
