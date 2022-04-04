@@ -29,6 +29,8 @@ color: #fff !important;
   } 
 }
 
+
+
 .footer {
   &__title, & a, & i, &__credits, & address {
     color: #fff;
@@ -221,4 +223,9 @@ color: #fff !important;
   @media screen and (min-width: 1200px) {
     margin-right: 40px;
   }
+}
+.search__box .search-engine__item .product-card__pictures {
+  img {
+    max-height: 125px;
+  } 
 }
