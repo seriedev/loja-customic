@@ -15,7 +15,10 @@ color: #fff !important;
   height: 250px!important;
 
   img{
-    height: 125px;
+    max-height: 180px;
+    @media(min-width: 767px) {
+      max-height: 250px;
+    }
     width: auto;
     margin: 0 auto;
     object-fit: cover;

@@ -31,7 +31,11 @@
           <slot name="header"/>
 
           <div class="product-card__pictures">
-            <img :src="`${isSearchingPhoneModel.foto}`" alt="">
+            <img 
+              v-if="isSearchingPhoneModel.foto"
+              :src="`${isSearchingPhoneModel.foto}`" 
+              :alt="name"
+            >
           </div>
 
           <slot name="title">
