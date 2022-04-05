@@ -21,22 +21,51 @@
     var $remainingHours = diff_hours(now,end);
     var $remainingMinutes = $remaining.getMinutes();
     if ($remainingMinutes < 0) $remainingMinutes * -1;
+    
 
     $hourConnector = $remainingHours > 1 ? "nas próximas" : "na próxima";
+    if ($remainingHours == 0) $hourConnector = "dentro de";
     // =======================
+
+    // Textos para o fechamento
+    let $twoDays = false;
+    let $finishingText = "";
+    var $quandoentrega = "Até Amanhã";
+    // Texto do fim de semana
+    function weekendText() {
+      let textPrazo = "";
+      if (now.getDay() === 5 && now.getHours() > 14 || now.getDay() === 6 || now.getDay() === 0) {
+        textPrazo = "Segunda-feira"
+      }else if(now.getHours() > 14){
+        textPrazo = "Até 2 dia úteis"
+      }else{
+        textPrazo = "Até Amanhã"
+      }
+      $finishingText = textPrazo
+      $quandoentrega = textPrazo;
+    }
 
     if (now.getHours() > 14 && now.getMinutes() > 0) {
       let tomorrow = new Date()
       tomorrow.setDate(now.getDate() + 1);
       tomorrow.setHours(15,0,0,0);
       $remaining = new Date(tomorrow - now);
-      $string = (diff_hours(tomorrow,now)) +"h "+$remaining.getMinutes()+"min";
-      $html = "Até 2 dia úteis<br class='imutable'><span>Se pedir dentro de <br><b class='green'>"+$string+"</b></span>";
+      $remainingHours = diff_hours(tomorrow,now)
+      if ($remainingHours == 24) $remainingHours -= 1;
+      $string = $remainingHours +"h "+$remaining.getMinutes()+"min";
+      $twoDays = true;
+      $finishingText = "Até 2 dia úteis"
+      weekendText();
+      $html = $quandoentrega +"<br class='imutable'><span>Se pedir dentro de <br><b class='green'>"+$string+"</b></span>";
     }else{
       $string = $hourConnector+"<br><b class='green'>"+ $remainingHours +"h "+$remainingMinutes+"min</b>";
-      $html = "Até Amanhã<br class='imutable'><span>Se pedir "+$string+"</span>";
+      $twoDays = false;
+      $finishingText = $quandoentrega;
       $untilTomorrow = true;
+      weekendText();
+      $html = $quandoentrega+"<br class='imutable'><span>Se pedir "+$string+"</span>";
     }
+
     function setCookie(name, value, days) {
       sessionStorage.setItem(name, value);
     }
@@ -53,7 +82,8 @@
 
   function changeSedex() {
 
-    function defaultReplace() {
+    // Troca o texto do Sedex;
+
       setTimeout(() => {
         if ($(".list-group").length > 0) {
           $(".list-group > a").each(function (index, element) {
@@ -66,25 +96,24 @@
           });
         }
       }, 250);
-    }
-    if (window.location.href.indexOf("cart") > 0) {
-      defaultReplace();
-    } else {
-      defaultReplace();
-    }
   }
+
+  // Mutation para observar as mudanças na tabela
   function MutationSedex() {
-    let elementToObserve = $(".shipping-calculator__services")[0];
-    let configs = { childList: true,subtree : true };
+    // Opções
+    let elementToObserve = $(".shipping-calculator__services > span")[0];
+    let configs = { childList: true,subtree : false };
     if (window.location.href.toUpperCase().indexOf("CHECKOUT") > 0) {
        elementToObserve = $(".col .checkout > span")[0];
        configs = { childList: true,subtree : false };
     }
+    // Defs
     const observer = new MutationObserver(function (mutations) {
       mutations.forEach(function (mutation) {
         changeSedex();
       });
     });
+    // Exec
     if (elementToObserve != undefined) {
       observer.observe(elementToObserve, configs);
       if (window.location.href.toUpperCase().indexOf("CHECKOUT") > 0) {
@@ -103,20 +132,15 @@ $(function () {
   if (window.location.href.indexOf("utm_campaign=tim1") > 0 || getCookie($cookieName) != null) {
     if (window.location.href.toUpperCase().indexOf("CHECKOUT") < 0) {
       setCookie($cookieName, "true", 1);
-      //    console.log("Phase 1");
           if ($("#spa").length > 0) {
-      //      console.log("Phase 2");
             if ($(".shipping-calculator__services")[0] === undefined) {
-      //        console.log("Phase 2.3");
               var checkExist = setInterval(function () {
                 if ($(".shipping-calculator__services").length) {
                   clearInterval(checkExist);
-      //            console.log("Phase 2.4");
                   MutationSedex();
                 }
               }, 100);
             } else {
-      //        console.log("Phase 2.2");
               MutationSedex();
             }
           }
@@ -126,7 +150,6 @@ $(function () {
   // Pagina de Pagamento
   if (getCookie($cookieName) != null) {
     // if (window.location.href.indexOf("checkout") > 0) {
-        console.log("É checkout");
         var checkExist = setInterval(function () {
           if ($(".checkout__shipping").length > 0) {
             if (window.location.href.indexOf("checkout") > 0){
@@ -137,12 +160,9 @@ $(function () {
         }, 100);
 
         function CheckoutSedex() {
-          // console.log("Tabela existe");
           const elementToObserve = $(".checkout__app")[0];
           const observer = new MutationObserver(function (mutations) {
             mutations.forEach(function (mutation) {
-
-
               var checkExist = setInterval(function () {
                 if ($(".checkout__shipping").length > 0) {
                   clearInterval(checkExist);
@@ -152,22 +172,20 @@ $(function () {
 
             });
           });
-
           observer.observe(elementToObserve, { childList: false,attributes:true,subtree : false });
-          
-
-
-
         }
-
-
-
-    // }
   }
 
 
   // Limpa o cookie quando confirma o pedido
   if (window.location.href.indexOf("/confirmation/") > 0){
+    var checkExist = setInterval(function () {
+      if ($("#confirmation .shipping-line>strong").length > 0) {
+        clearInterval(checkExist);
+        $(".shipping-line>strong").text($finishingText)
+      }
+    }, 150);
+
     eraseCookie($cookieName)
   }
 });
