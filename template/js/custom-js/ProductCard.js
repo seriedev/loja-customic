@@ -109,7 +109,7 @@ export default {
       if (body.pictures) {
         body.pictures.map( function(product, index) {
           if(index === 0){
-            listNomeProduto.foto = (product.zoom || product.normal).url;
+            listNomeProduto.foto = (product.normal || product.zoom).url;
           }
         })
       }
@@ -179,7 +179,7 @@ export default {
                     let skuId = product._id;
                     
                     if(skuId === variationPictureId){
-                      listNomeProduto.foto = (product.zoom || product.normal).url;
+                      listNomeProduto.foto = (product.normal || product.zoom).url;
                     }
                   }
                 })
