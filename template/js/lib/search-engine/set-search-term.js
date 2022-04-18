@@ -18,6 +18,8 @@ export default (self, term) => {
       case 'a30':
       case 'a20/a30':
         return 'A20/A30'
+      case 'a52':
+        return 'galaxy a52 4g/5g'
       default:
         return word.charAt(0).toUpperCase() + word.substr(1)
     }
