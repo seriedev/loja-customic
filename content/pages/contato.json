@@ -3,10 +3,5 @@
   "body": "<!--StartFragment-->\n\nFale conosco\n\nEstamos prontos para atendê-lo, deixe seu recado e responderemos o mais rápido possível. \n\n##### <i class=\"fa fa-phone\" aria-hidden=\"true\"></i> (51)3086-0620\n\n##### <i class=\"fa fa-whatsapp\" aria-hidden=\"true\"></i> (51)9 9265-6033\n\n##### <i class=\"fa fa-envelope\" aria-hidden=\"true\"></i> [atendimento@customic.com.br](mailto:atendimento@customic.com.br)\n\n<!--EndFragment-->\n\n<!--EndFragment-->",
   "meta_title": "Contato - Customic",
   "meta_description": "Contato - Fale com a Customic ",
-  "sections": [
-    {
-      "type": "custom-html",
-      "html": "<div role=\"main\" id=\"quero-um-contato-blog-421936b30b747d4259ce\"></div><script type=\"text/javascript\" src=\"https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js\"></script><script type=\"text/javascript\"> new RDStationForms('quero-um-contato-blog-421936b30b747d4259ce', 'UA-28628232-1').createForm();</script>"
-    }
-  ]
+  "sections": []
 }
