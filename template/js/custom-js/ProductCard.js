@@ -105,7 +105,7 @@ export default {
       let term = this.searchTerm;
       let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
 
-      //setando foto default 
+      //setando foto default caso não tenha sido pesquisado por nenhum termo
       if (body.pictures) {
         body.pictures.map( function(product, index) {
           if(index === 0){
@@ -115,9 +115,7 @@ export default {
       }
       
       if(term !== undefined && term !== null){
-        console.log(term)
         term = term.toLowerCase();
-        console.log(nameProduct)
         nameProduct = nameProduct.toLowerCase();
   
         if(getListModels !== undefined){
@@ -163,6 +161,43 @@ export default {
 
                 listNomeProduto.modelo = modeloVariationInitial;
                 listNomeProduto.marca = marcaVariation;
+
+                console.log('tipo de marca', marcaVariation)
+
+                switch (marcaVariation) {
+                  case 'Samsung':
+                    let pictureId = variation.picture_id;
+
+                    //setando foto default 
+                    if (body.pictures) {
+
+                      body.pictures.map( function(product, index) {
+                        console.log('item foto', product)
+
+                        if(product._id == pictureId){
+                          listNomeProduto.foto = (product.normal || product.zoom).url;
+                        }else{
+                          listNomeProduto.foto = "Produto sem foto";
+                        }
+                      })
+                    }
+                    break;
+                  case 'Apple':
+                    
+                    break;
+                  case 'Motorola':
+                    
+                    break;
+                  case 'LG':
+                    
+                      break;
+                  case 'Huawei':
+                    
+                    break;
+                  case 'Xiaomi':
+                    
+                    break;
+                }
               }
 
               //se tem a cor busca pela foto 
