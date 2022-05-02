@@ -75,7 +75,8 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/combos.png"
+          "img": "/img/uploads/combos.png",
+          "link": "/combos"
         }
       ]
     },
