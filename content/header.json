@@ -21,7 +21,8 @@
       "/colecoes?Coleções",
       "/peliculas?Películas",
       "/popsockets?PopSockets",
-      "/acessorios?Acessórios"
+      "/acessorios?Acessórios",
+      "/combo?Combo"
     ],
     "random": 0,
     "full_width": false
