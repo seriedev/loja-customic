@@ -80,19 +80,6 @@
       ]
     },
     {
-      "type": "banner-slider",
-      "autoplay": 0,
-      "full_width": false,
-      "slides": [
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/combos.png",
-          "link": "/combos"
-        }
-      ]
-    },
-    {
       "type": "banners-grid",
       "banners": [
         {
