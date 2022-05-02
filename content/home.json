@@ -72,6 +72,14 @@
       "markdown": "<div class=\"collectionID\"><h2 class=\"my-0\"><div style=\"text-align:center\">Coleções em Destaque</h2></div>"
     },
     {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/combos.png"
+        }
+      ]
+    },
+    {
       "type": "banner-slider",
       "autoplay": 0,
       "full_width": false,
