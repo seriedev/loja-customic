@@ -49,19 +49,6 @@
       "full_width": true
     },
     {
-      "type": "banner-slider",
-      "autoplay": 0,
-      "full_width": false,
-      "slides": [
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/combos.png",
-          "link": "/combos"
-        }
-      ]
-    },
-    {
       "type": "collection-shelf",
       "shuffle": true,
       "limit": 12,
@@ -83,6 +70,19 @@
     {
       "type": "custom-content",
       "markdown": "<div class=\"collectionID\"><h2 class=\"my-0\"><div style=\"text-align:center\">Coleções em Destaque</h2></div>"
+    },
+    {
+      "type": "banner-slider",
+      "autoplay": 0,
+      "full_width": false,
+      "slides": [
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/combos.png",
+          "link": "/combos"
+        }
+      ]
     },
     {
       "type": "banners-grid",
