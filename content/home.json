@@ -76,7 +76,8 @@
       "banners": [
         {
           "img": "/img/uploads/combos.png",
-          "link": "/combos"
+          "link": "/combos",
+          "mobile_img": "/img/uploads/mobile.png"
         }
       ]
     },
