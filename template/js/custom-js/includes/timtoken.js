@@ -11,7 +11,7 @@
     end.setHours(15,0,0,0);
     function diff_hours(dt2, dt1) 
     {
-   
+
       var diff =(dt2.getTime() - dt1.getTime()) / 1000;
       diff /= (60 * 60);
       return Math.abs(Math.round(diff));
@@ -66,14 +66,28 @@
       $html = $quandoentrega+"<br class='imutable'><span>Se pedir "+$string+"</span>";
     }
 
-    function setCookie(name, value, days) {
-      sessionStorage.setItem(name, value);
+    function setCookie(name, value, days = 0.5) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+        let expires = "expires="+d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
-    function getCookie(name) {
-      return sessionStorage.getItem(name);
+    function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
     }
     function eraseCookie(name) {
-      sessionStorage.removeItem(name);
+        document.cookie = name + "=" + null + ";Expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/";
     }
     
   // =====================
@@ -81,9 +95,7 @@
   // =====================
 
   function changeSedex() {
-
     // Troca o texto do Sedex;
-
       setTimeout(() => {
         if ($(".list-group").length > 0) {
           $(".list-group > a").each(function (index, element) {
@@ -95,7 +107,7 @@
             }
           });
         }
-      }, 250);
+      }, 100);
   }
 
   // Mutation para observar as mudanças na tabela
@@ -129,7 +141,7 @@ $(function () {
   // Execs
   // =====================
   // Pagina de carrinho
-  if (window.location.href.indexOf("utm_campaign=tim1") > 0 || getCookie($cookieName) != null) {
+  if (window.location.href.indexOf("utm_campaign=tim1") > 0 || getCookie($cookieName) != '') {
       $("body").addClass("tokenTim_page");
     if (window.location.href.toUpperCase().indexOf("CHECKOUT") < 0) {
       setCookie($cookieName, "true", 1);
@@ -149,7 +161,7 @@ $(function () {
 
   }
   // Pagina de Pagamento
-  if (getCookie($cookieName) != null) {
+  if (getCookie($cookieName) != '') {
     // if (window.location.href.indexOf("checkout") > 0) {
         var checkExist = setInterval(function () {
           if ($(".checkout__shipping").length > 0) {
@@ -195,24 +207,22 @@ $(function () {
 var checkExist = setInterval(function () {
   if ($(".checkout__shipping-method").length > 0) {
     clearInterval(checkExist);
-    if (getCookie($cookieName) != null) {
+    if (getCookie($cookieName) != '') {
       if (window.location.href.indexOf("checkout") > 0) {
         if ($(".checkout__shipping-method").length > 0) {
           if ($(".checkout__shipping-method > small").text() == "SEDEX") {
             $text = $untilTomorrow ? "Até amanha" : "2 dias uteis";
             $(".checkout__shipping-method .shipping-line strong.mr-2").text($text);
-
-
             $(".checkout__shipping .btn").click(function (e) { 
               e.preventDefault();
               setTimeout(() => {
                 changeSedex();
                 MutationSedex();
-              }, 500);
+              }, 250);
             });
           }
         }
       }
     }
   }
-}, 1000);
+}, 250);
