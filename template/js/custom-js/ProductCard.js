@@ -105,19 +105,15 @@ export default {
       let term = this.searchTerm;
       let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
 
-      //setando foto default caso não tenha sido pesquisado por nenhum termo
-      if (body.pictures) {
-        body.pictures.map( function(product, index) {
-          if(index === 0){
-            listNomeProduto.foto = (product.normal || product.zoom).url;
-          }
-        })
-      }
+      //setando foto default 
+      body.pictures.map(function(product, index) {
+        listNomeProduto.foto = (product.normal || product.zoom).url;
+      });
       
       if(term !== undefined && term !== null){
         term = term.toLowerCase();
         nameProduct = nameProduct.toLowerCase();
-  
+
         if(getListModels !== undefined){
 
           getListModels.map( (variation) => {    
@@ -127,6 +123,7 @@ export default {
               let marcaVariation = "";
               let variationColor = "";
               let modeloVariationInitial = "";
+              let pictureId = variation.picture_id;
 
               //se array nao for vazio 
               if( variation.specifications.modelo.length > 0){
@@ -162,67 +159,35 @@ export default {
                 listNomeProduto.modelo = modeloVariationInitial;
                 listNomeProduto.marca = marcaVariation;
 
-                console.log('tipo de marca', marcaVariation)
+                //console.log('tipo de marca', marcaVariation);
 
                 switch (marcaVariation) {
-                  case 'Samsung':
-                    let pictureId = variation.picture_id;
-
-                    //setando foto default 
-                    if (body.pictures) {
-
-                      body.pictures.map( function(product, index) {
-                        console.log('item foto', product)
-
-                        if(product._id == pictureId){
-                          listNomeProduto.foto = (product.normal || product.zoom).url;
-                        }else{
-                          listNomeProduto.foto = "Produto sem foto";
-                        }
-                      })
-                    }
+                  case "Samsung":
+                    body.pictures.map(function(product, index) {
+                      if (product._id == pictureId) {
+                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                      }
+                    });
                     break;
-                  case 'Apple':
-                    
+                  case "Apple":
                     break;
-                  case 'Motorola':
-                    
+                  case "Motorola":
                     break;
-                  case 'LG':
-                    
-                      break;
-                  case 'Huawei':
-                    
+                  case "LG":
                     break;
-                  case 'Xiaomi':
-                    
+                  case "Huawei":
+                    break;
+                  case "Xiaomi":
                     break;
                 }
-              }
-
-              //se tem a cor busca pela foto 
-              if(term.indexOf(variationColor) !== -1 ){
-                variationColor = variationColor.charAt(0).toUpperCase() + variationColor.slice(1)
-                listNomeProduto.cor = variationColor;
-                                
-                body.pictures.map( function(product,index) {
-
-                  let variationPictureId = variation.picture_id;
-
-                  if(product._id !== undefined){
-
-                    let skuId = product._id;
-                    
-                    if(skuId === variationPictureId){
-                      listNomeProduto.foto = (product.normal || product.zoom).url;
-                    }
-                  }
-                })
-              }
+              }              
             }
           })
+          
         }
-      }    
+      }   
+      
+      //console.log("listNomeProduto.foto ---", listNomeProduto.foto);
 
       if(listNomeProduto.cor !== "" && listNomeProduto.modelo !== ""){
         listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo} / ${listNomeProduto.cor}`;
