@@ -75,9 +75,9 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/desktop.png",
+          "img": "/img/uploads/banner-1500.png",
           "link": "/combos",
-          "mobile_img": "/img/uploads/mobile.png"
+          "mobile_img": "/img/uploads/img_1065.png"
         }
       ]
     },
