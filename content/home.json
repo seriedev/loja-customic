@@ -75,6 +75,16 @@
       "type": "banners-grid",
       "banners": [
         {
+          "img": "/img/uploads/combos.png",
+          "link": "/combos",
+          "mobile_img": "/img/uploads/mobile.png"
+        }
+      ]
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
           "img": "/img/uploads/anyconv.com__banner-categoria-customiccapas-iphone.webp",
           "link": "/todasascasesdeiphone/",
           "alt": "Capa Iphone",
