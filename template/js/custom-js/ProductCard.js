@@ -106,20 +106,14 @@ export default {
       let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
 
       //setando foto default 
-      if (body.pictures) {
-        body.pictures.map( function(product, index) {
-          if(index === 0){
-            listNomeProduto.foto = (product.normal || product.zoom).url;
-          }
-        })
-      }
+      body.pictures.map(function(product, index) {
+        listNomeProduto.foto = (product.normal || product.zoom).url;
+      });
       
       if(term !== undefined && term !== null){
-        console.log(term)
         term = term.toLowerCase();
-        console.log(nameProduct)
         nameProduct = nameProduct.toLowerCase();
-  
+
         if(getListModels !== undefined){
 
           getListModels.map( (variation) => {    
@@ -129,6 +123,7 @@ export default {
               let marcaVariation = "";
               let variationColor = "";
               let modeloVariationInitial = "";
+              let pictureId = variation.picture_id;
 
               //se array nao for vazio 
               if( variation.specifications.modelo.length > 0){
@@ -163,31 +158,36 @@ export default {
 
                 listNomeProduto.modelo = modeloVariationInitial;
                 listNomeProduto.marca = marcaVariation;
-              }
 
-              //se tem a cor busca pela foto 
-              if(term.indexOf(variationColor) !== -1 ){
-                variationColor = variationColor.charAt(0).toUpperCase() + variationColor.slice(1)
-                listNomeProduto.cor = variationColor;
-                                
-                body.pictures.map( function(product,index) {
+                //console.log('tipo de marca', marcaVariation);
 
-                  let variationPictureId = variation.picture_id;
-
-                  if(product._id !== undefined){
-
-                    let skuId = product._id;
-                    
-                    if(skuId === variationPictureId){
-                      listNomeProduto.foto = (product.normal || product.zoom).url;
-                    }
-                  }
-                })
-              }
+                switch (marcaVariation) {
+                  case "Samsung":
+                    body.pictures.map(function(product, index) {
+                      if (product._id == pictureId) {
+                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                      }
+                    });
+                    break;
+                  case "Apple":
+                    break;
+                  case "Motorola":
+                    break;
+                  case "LG":
+                    break;
+                  case "Huawei":
+                    break;
+                  case "Xiaomi":
+                    break;
+                }
+              }              
             }
           })
+          
         }
-      }    
+      }   
+      
+      //console.log("listNomeProduto.foto ---", listNomeProduto.foto);
 
       if(listNomeProduto.cor !== "" && listNomeProduto.modelo !== ""){
         listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo} / ${listNomeProduto.cor}`;
