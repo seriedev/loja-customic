@@ -89,7 +89,8 @@ export default {
       isWaitingBuy: false,
       isHovered: false,
       isFavorite: false,
-      error: ''
+      error: '',
+      specifications: ""
     }
   },
 
@@ -109,7 +110,13 @@ export default {
       body.pictures.map(function(product, index) {
         listNomeProduto.foto = (product.normal || product.zoom).url;
       });
-      
+
+      if (term === undefined || term === null) {
+        if ($(".page-title__head h1").length > 0) { 
+          term = $(".page-title__head h1").text();
+        }
+      }
+
       if(term !== undefined && term !== null){
         term = term.toLowerCase();
         nameProduct = nameProduct.toLowerCase();
@@ -159,8 +166,6 @@ export default {
                 listNomeProduto.modelo = modeloVariationInitial;
                 listNomeProduto.marca = marcaVariation;
 
-                //console.log('tipo de marca', marcaVariation);
-
                 switch (marcaVariation) {
                   case "Samsung":
                     body.pictures.map(function(product, index) {
@@ -170,14 +175,39 @@ export default {
                     });
                     break;
                   case "Apple":
+                    body.pictures.map(function(product, index) {
+                      if (product._id == pictureId) {
+                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                      }
+                    });
                     break;
                   case "Motorola":
+                    body.pictures.map(function(product, index) {
+                      if (product._id == pictureId) {
+                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                      }
+                    });
                     break;
                   case "LG":
+                    body.pictures.map(function(product, index) {
+                      if (product._id == pictureId) {
+                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                      }
+                    });
                     break;
                   case "Huawei":
+                    body.pictures.map(function(product, index) {
+                      if (product._id == pictureId) {
+                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                      }
+                    });
                     break;
                   case "Xiaomi":
+                    body.pictures.map(function(product, index) {
+                      if (product._id == pictureId) {
+                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                      }
+                    });
                     break;
                 }
               }              
@@ -187,7 +217,6 @@ export default {
         }
       }   
       
-      //console.log("listNomeProduto.foto ---", listNomeProduto.foto);
 
       if(listNomeProduto.cor !== "" && listNomeProduto.modelo !== ""){
         listNomeProduto.specifictions = ` / ${listNomeProduto.marca} / ${listNomeProduto.modelo} / ${listNomeProduto.cor}`;
@@ -337,6 +366,7 @@ export default {
   },
 
   created () {
+
     if (this.product) {
       this.setBody(this.product)
       if (this.product.available === undefined) {
@@ -349,5 +379,5 @@ export default {
     if (!this.isLoaded) {
       this.fetchItem()
     }
-  },
+  }
 }
