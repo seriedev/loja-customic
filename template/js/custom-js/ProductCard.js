@@ -108,7 +108,9 @@ export default {
 
       //setando foto default 
       body.pictures.map(function(product, index) {
-        listNomeProduto.foto = (product.normal || product.zoom).url;
+        if (index === 0) {
+          listNomeProduto.foto = (product.normal || product.zoom).url;
+        }
       });
 
       if (term === undefined || term === null) {
