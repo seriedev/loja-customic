@@ -34,7 +34,7 @@
     // Texto do fim de semana
     function weekendText() {
       let textPrazo = "";
-      if (now.getDay() === 5 && now.getHours() > 14 || now.getDay() === 6 || now.getDay() === 0) {
+      if (now.getDay() === 5 || now.getDay() === 6 || now.getDay() === 0) {
         textPrazo = "Segunda-feira"
       }else if(now.getHours() > 14){
         textPrazo = "Até 2 dia úteis"
