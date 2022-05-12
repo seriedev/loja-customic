@@ -1,5 +1,5 @@
 // Add your custom JavaScript for storefront pages here.
-document.getElementById('c-5fad9d7580c6216a3fc547dc').href = '/impactor-flex-antibacteria-all';
+document.getElementById('c-5fad9d7580c6216a3fc547dc,cd-5fad9d7580c6216a3fc547dc').href = '/impactor-flex-antibacteria-all';
 document.getElementById('c-5f1f3f5bf023684cdbd4a1f4').href = '/impactor-ultra-all';
 document.getElementById('c-5f1f3f6cf023684cdbd4a218').href = '/impactor-ultra-fabric-all';
 document.getElementById('c-5f1f3f5af023684cdbd4a1f2').href = '/impactor-flex-all';
