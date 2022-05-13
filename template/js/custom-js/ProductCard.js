@@ -106,9 +106,10 @@ export default {
       let term = this.searchTerm;
       let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
 
-      //setando foto default product card
       body.pictures.map(function(product, index) {
-        listNomeProduto.foto = (product.normal || product.zoom).url;
+        if (index === 0) {
+          listNomeProduto.foto = (product.normal || product.zoom).url;
+        }
       });
 
       if (term === undefined || term === null) {
