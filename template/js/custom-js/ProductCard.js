@@ -106,7 +106,6 @@ export default {
       let term = this.searchTerm;
       let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
 
-      //setando foto default productCard 
       body.pictures.map(function(product, index) {
         if (index === 0) {
           listNomeProduto.foto = (product.normal || product.zoom).url;
