@@ -31,11 +31,12 @@
           <slot name="header"/>
 
           <div class="product-card__pictures">
-            <img 
-              v-if="isSearchingPhoneModel.foto"
-              :src="`${isSearchingPhoneModel.foto}`" 
-              :alt="name"
-            >
+            <template v-if="isSearchingPhoneModel.foto && isSearchingPhoneModel.foto.length">
+              <a-picture class="product-card__picture" v-for="(picture, index) in isSearchingPhoneModel.foto.slice(0, 2).reverse()"
+                v-if="isSearchingPhoneModel.foto.length === 1 || index === 1 || isHovered" :key="index" :src="picture"
+                :can-calc-height="false" />
+            </template>
+            <a-picture v-else class="product-card__picture" />
           </div>
 
           <slot name="title">
