@@ -90,7 +90,8 @@ export default {
       isHovered: false,
       isFavorite: false,
       error: '',
-      specifications: ""
+      specifications: "",
+      teste: []
     }
   },
 
@@ -104,11 +105,16 @@ export default {
       let nameProduct = this.body.name;
       let getListModels = this.body.variations;
       let term = this.searchTerm;
-      let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: "", specifictions: ""};
+      let listNomeProduto = {nome: "", modelo: "", marca: "", cor: "", foto: [], specifictions: ""};
 
       body.pictures.map(function(product, index) {
         if (index === 0) {
-          listNomeProduto.foto = (product.normal || product.zoom).url;
+          let foto = (product.normal || product.zoom).url;
+          listNomeProduto.foto.push(foto);
+        }
+        if (index === 1) {
+          let foto = (product.normal || product.zoom).url;
+          listNomeProduto.foto.push(foto);
         }
       });
 
@@ -171,42 +177,54 @@ export default {
                   case "Samsung":
                     body.pictures.map(function(product, index) {
                       if (product._id == pictureId) {
-                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                        let foto = (product.normal || product.zoom).url;
+                        listNomeProduto.foto = [];
+                        listNomeProduto.foto.unshift(foto);
                       }
                     });
                     break;
                   case "Apple":
                     body.pictures.map(function(product, index) {
                       if (product._id == pictureId) {
-                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                        let foto = (product.normal || product.zoom).url;
+                        listNomeProduto.foto = [];
+                        listNomeProduto.foto.unshift(foto);
                       }
                     });
                     break;
                   case "Motorola":
                     body.pictures.map(function(product, index) {
                       if (product._id == pictureId) {
-                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                        let foto = (product.normal || product.zoom).url;
+                        listNomeProduto.foto = [];
+                        listNomeProduto.foto.unshift(foto);
                       }
                     });
                     break;
                   case "LG":
                     body.pictures.map(function(product, index) {
                       if (product._id == pictureId) {
-                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                        let foto = (product.normal || product.zoom).url;
+                        listNomeProduto.foto = [];
+                        listNomeProduto.foto.unshift(foto);
                       }
                     });
                     break;
                   case "Huawei":
                     body.pictures.map(function(product, index) {
                       if (product._id == pictureId) {
-                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                        let foto = (product.normal || product.zoom).url;
+                        listNomeProduto.foto = [];
+                        listNomeProduto.foto.unshift(foto);
                       }
                     });
                     break;
                   case "Xiaomi":
                     body.pictures.map(function(product, index) {
                       if (product._id == pictureId) {
-                        listNomeProduto.foto = (product.normal || product.zoom).url;
+                        let foto = (product.normal || product.zoom).url;
+                        listNomeProduto.foto = [];
+                        listNomeProduto.foto.unshift(foto);
                       }
                     });
                     break;
