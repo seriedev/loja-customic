@@ -144,10 +144,15 @@ export default {
                 modeloVariation = variation.specifications.modelo[0].text;
                 modeloVariationInitial = variation.specifications.modelo[0].text;
               }
-              if(variation.specifications.marca_do_aparelho.length > 0){
-                marcaVariation = variation.specifications.marca_do_aparelho[0].text;
-                modeloVariation = modeloVariation.toLowerCase();
+
+              if (variation.specifications.marca_do_aparelho !== "" && variation.specifications.marca_do_aparelho !== undefined && variation.specifications.marca_do_aparelho !== null) {
+                
+                if(variation.specifications.marca_do_aparelho.length > 0){
+                  marcaVariation = variation.specifications.marca_do_aparelho[0].text;
+                  modeloVariation = modeloVariation.toLowerCase();
+                }
               }
+
               if(variation.specifications.colors !== undefined){
                 
                 if(variation.specifications.colors.length > 0){
