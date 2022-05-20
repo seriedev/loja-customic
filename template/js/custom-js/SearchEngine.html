@@ -367,10 +367,11 @@
                 v-bind="{ product }"
               >
                 <product-card
-                  class="search-engine__item uvaa"
+                  class="search-engine__item"
                   v-bind="productCardProps"
                   :product="product"
                   :searchTerm="term"
+                  v-if="product"
                 />
               </slot>
             </div>
