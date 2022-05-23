@@ -17,34 +17,26 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/customic-magsafe-1200x466-.jpg",
-          "link": "https://customic.com.br/impactor-clear-magsafe-all",
-          "alt": "Capa Impactor Clear MagSafe Customic",
-          "mobile_img": "/img/uploads/mobile-banner-customic-0322-1.jpg"
+          "img": "/img/uploads/banners-desk-2022-purple-2-frase-a-.jpg",
+          "link": "https://customic.com.br/impactor-flex-all",
+          "alt": "Capa Impactor Flex Proteção Militar Certificada Customic",
+          "mobile_img": "/img/uploads/banner-mobile-2022-purple-2-a.jpg"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/customic-personalizadas-1200x466-.jpg",
-          "link": "https://www.lab.customic.com.br/",
-          "mobile_img": "/img/uploads/mobile-banner-customic-0322-2.jpg",
-          "alt": "Capa para Celular Personalizada Customic"
-        },
-        {
-          "start": "2022-02-10T15:22:57.412Z",
-          "end": "",
-          "img": "/img/uploads/customic-ultra-1200x466-.jpg",
-          "link": "https://customic.com.br/impactor-ultra-all",
-          "mobile_img": "/img/uploads/mobile-banner-customic-0322-3.jpg",
-          "alt": "Capa Impactor Ultra Customic"
+          "img": "/img/uploads/banners-desk-2022-promo-brinde.png",
+          "link": "",
+          "mobile_img": "/img/uploads/banner-mobile-2022-promo-brind.jpg",
+          "alt": "Ganhe Popsockets Brinde Customic"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/desk-banner-customic-0322-4.jpg",
-          "mobile_img": "/img/uploads/mobile-banner-customic-0322-4.jpg",
-          "link": "/pelicula-antiblue-vidro-3d-customic",
-          "alt": "Película Antiblue Vidro 3D Customic"
+          "img": "/img/uploads/banners-desk-2022-antiblue-2.jpg",
+          "link": "https://customic.com.br/pelicula-antiblue-vidro-3d-customic",
+          "mobile_img": "/img/uploads/banner-mobile-2022-antiblue-2.webp",
+          "alt": "Película AntiBlue Vidro 3D Customic"
         }
       ],
       "full_width": true
