@@ -2,6 +2,15 @@
 .footer address {
 color: #fff !important;
 }
+// modificacao storefront antes da nova versão
+@media(max-width: 767px) {
+  .gallery__thumbs {
+    flex-wrap: wrap
+  }
+  .gallery__item {
+    margin: 0 15px 15px 0;
+  }
+}
 
 .product-card__prices{
   @media (max-width: 1024px){
