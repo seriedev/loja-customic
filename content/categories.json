@@ -14,7 +14,7 @@
     {
       "type": "category-retail",
       "enabled": true,
-      "sort": "slug"
+      "sort": "views"
     },
     {
       "type": "document-banner",

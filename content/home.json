@@ -9,7 +9,7 @@
         {
           "start": "",
           "end": "",
-          "img": "https://i.imgur.com/5F93z1f.jpg",
+          "img": "/img/uploads/atualizados-2400x932-namorados.webp",
           "alt": "🚀 Frete Grátis acima de R$199 utilizando o cupom NAMORADOSCUSTOMIC ❤️",
           "mobile_img": "/img/uploads/banner-mobile-namorados.webp",
           "link": "https://www.lab.customic.com.br/"
@@ -17,15 +17,15 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/desk-webp.webp",
+          "img": "/img/uploads/atualizados-2400x932-purple.webp",
           "link": "https://customic.com.br/impactor-flex-antibacteria-all",
           "alt": "Capa Impactor Flex Proteção Militar Certificada Customic ",
-          "mobile_img": "/img/uploads/banner-mobile-2022-purple-2-a.jpg"
+          "mobile_img": "/img/uploads/banner-mobile-2022-purple.jpg"
         },
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banners-desk-2022-promo-brinde.png",
+          "img": "/img/uploads/atualizados-2400x932-promo.webp",
           "link": "",
           "mobile_img": "/img/uploads/banner-mobile-2022-promo-brind.jpg",
           "alt": "Ganhe Popsockets Brinde Customic"
@@ -33,7 +33,7 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/banners-desk-2022-antiblue-2.jpg",
+          "img": "/img/uploads/atualizados-2400x932-atiblue.webp",
           "link": "https://customic.com.br/pelicula-antiblue-vidro-3d-customic",
           "mobile_img": "/img/uploads/banner-mobile-2022-antiblue-2.webp",
           "alt": "Película AntiBlue Vidro 3D Customic"
@@ -58,7 +58,7 @@
       "link": "",
       "limit": "",
       "collection_id": "606c9f9333554a7d2d3cd8a3:collections:Linha Impactor de Proteção Militar:/linha-impactor-de-protecao-militar",
-      "sort": "offers"
+      "sort": "views"
     },
     {
       "type": "custom-content",
