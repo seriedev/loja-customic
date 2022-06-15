@@ -36,16 +36,20 @@
         "url": "/pages/onde-nos-encontrar"
       },
       {
-        "text": "Seja um revendedor Customic",
-        "url": "pages/seja-um-revendedor-oficial-customic"
-      },
-      {
         "text": "Blog",
         "url": "https://blog.customic.com.br/"
       },
       {
         "text": "Contato",
         "url": "/pages/contato"
+      },
+      {
+        "text": "Seja um revendedor Customic",
+        "url": "pages/seja-um-revendedor-oficial-customic"
+      },
+      {
+        "url": "https://novidades.customic.com.br/contato-artistas-e-influenciadores",
+        "text": "Artistas e influenciadores"
       }
     ]
   },
