@@ -34,6 +34,18 @@
       "full_width": true
     },
     {
+      "type": "offers-timer",
+      "max_hours": 1,
+      "start": "2022-06-17T17:11:01.351Z",
+      "end": "2022-06-30T18:18:13.617Z",
+      "offers": [
+        "62960512ac0cb4200ff69db7",
+        "62960878ac0cb4200ff6a554",
+        "62960ee6ac0cb4200ff6b6c3",
+        "6296106fac0cb4200ff6bad3"
+      ]
+    },
+    {
       "type": "collection-shelf",
       "shuffle": true,
       "limit": 12,
