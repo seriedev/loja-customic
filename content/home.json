@@ -9,10 +9,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/desk-promo-2-150.webp",
-          "alt": "🚀 Frete Grátis acima de R$150 ❤️",
-          "mobile_img": "/img/uploads/mobile-promo-2-150.webp",
-          "link": "https://www.lab.customic.com.br/"
+          "img": "/img/uploads/banner-promonight-desk.webp",
+          "mobile_img": "/img/uploads/banner-promonight-mobile.webp",
+          "link": "https://customic.com.br/night-week-customic"
         },
         {
           "start": "",
@@ -21,6 +20,14 @@
           "link": "https://customic.com.br/impactor-flex-antibacteria-all",
           "alt": "Capa Impactor Flex Proteção Militar Certificada Customic ",
           "mobile_img": "/img/uploads/banner-mobile-2022-purple.jpg"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/desk-promo-2-150.webp",
+          "alt": "🚀 Frete Grátis acima de R$150 ❤️",
+          "mobile_img": "/img/uploads/mobile-promo-2-150.webp",
+          "link": "https://www.lab.customic.com.br/"
         },
         {
           "start": "",
