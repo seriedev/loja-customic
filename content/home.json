@@ -29,6 +29,12 @@
           "link": "https://customic.com.br/pelicula-antiblue-vidro-3d-customic",
           "mobile_img": "/img/uploads/banner-mobile-2022-antiblue-2.webp",
           "alt": "Película AntiBlue Vidro 3D Customic"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-promonight-desk.webp",
+          "mobile_img": "/img/uploads/banner-promonight-mobile.webp"
         }
       ],
       "full_width": true
