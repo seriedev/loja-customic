@@ -134,6 +134,7 @@ export default {
 
           getListModels.map( (variation) => {    
 
+          
             if(variation !== undefined){
               let modeloVariation = "";
               let marcaVariation = "";
@@ -148,6 +149,12 @@ export default {
                 modeloVariationInitial = variation.specifications.modelo[0].text;
                 modeloVariation = modeloVariation.toLowerCase();
               }
+
+              //console.log(modeloVariationInitial)
+              //console.log(variation.name)
+              //console.log(variation)
+              //console.log(body.pictures)
+
 
               if (variation.specifications.marca_do_aparelho !== "" && variation.specifications.marca_do_aparelho !== undefined && variation.specifications.marca_do_aparelho !== null) {
                 
@@ -252,6 +259,14 @@ export default {
               //se nao tem a variacao de marca
               if (term.indexOf(modeloVariation) !== -1) {
                 listNomeProduto.modelo = modeloVariationInitial;
+
+                body.pictures.map(function(product, index) {
+                  if (product._id == pictureId) {
+                    let foto = (product.normal || product.zoom).url;
+                    listNomeProduto.foto = [];
+                    listNomeProduto.foto.push(foto);
+                  }
+                });
               }              
             }
           })
