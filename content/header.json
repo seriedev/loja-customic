@@ -1,7 +1,7 @@
 {
   "marketing_stripe": {
-    "text": "🚀 Frete Grátis acima de R$199 utilizando o cupom NAMORADOSCUSTOMIC ❤️",
-    "link": "",
+    "text": "🚀 Frete Grátis acima de R$150 ❤️ ",
+    "link": "https://customic.com.br/colecoes",
     "background": "#2b2938",
     "color": "#ffffff"
   },
@@ -19,7 +19,7 @@
     "featured": [
       "/capas?Capas",
       "/colecoes?Coleções",
-      "/peliculas?Películas",
+      "/peliculas?Películas para Celular",
       "/popsockets?PopSockets",
       "/acessorios?Acessórios",
       "/combos?Combos"

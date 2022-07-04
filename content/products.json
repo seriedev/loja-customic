@@ -11,9 +11,9 @@
     {
       "type": "collection-shelf",
       "shuffle": true,
-      "limit": 12,
+      "limit": 24,
       "page": 1,
-      "collection_id": "6219247d7963422eee1d4106:collections:Aproveite! Frete grátis Brasil pedidos acima de R$ 199:/aproveite-frete-gratis-brasil-pedidos-acima-de-199",
+      "collection_id": "6219247d7963422eee1d4106:collections:Aproveite! Frete grátis Brasil pedidos acima de R$ 150:/aproveite-frete-gratis-brasil-pedidos-acima-de-150",
       "sort": "views"
     },
     {
@@ -31,6 +31,10 @@
     {
       "type": "product-specifications",
       "enabled": true
+    },
+    {
+      "type": "custom-html",
+      "html": "   <div role=\"main\" id=\"b2c-newsletter-site-28eb1cb7f1fd2326ac39\"></div><script type=\"text/javascript\" src=\"https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js\"></script><script type=\"text/javascript\"> new RDStationForms('b2c-newsletter-site-28eb1cb7f1fd2326ac39', 'UA-28628232-1').createForm();</script>"
     }
   ]
 }

@@ -9,9 +9,9 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/atualizados-2400x932-namorados.webp",
-          "alt": "🚀 Frete Grátis acima de R$199 utilizando o cupom NAMORADOSCUSTOMIC ❤️",
-          "mobile_img": "/img/uploads/banner-mobile-namorados.webp",
+          "img": "/img/uploads/desk-promo-2-150.webp",
+          "alt": "🚀 Frete Grátis acima de R$150 ❤️",
+          "mobile_img": "/img/uploads/mobile-promo-2-150.webp",
           "link": "https://www.lab.customic.com.br/"
         },
         {
@@ -21,14 +21,6 @@
           "link": "https://customic.com.br/impactor-flex-antibacteria-all",
           "alt": "Capa Impactor Flex Proteção Militar Certificada Customic ",
           "mobile_img": "/img/uploads/banner-mobile-2022-purple.jpg"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/atualizados-2400x932-promo.webp",
-          "link": "",
-          "mobile_img": "/img/uploads/banner-mobile-2022-promo-brind.jpg",
-          "alt": "Ganhe Popsockets Brinde Customic"
         },
         {
           "start": "",
@@ -136,6 +128,10 @@
       "link": "https://www.instagram.com/customic/",
       "mobile_img": "/img/uploads/anyconv.com__banner-insta-mobile.webp",
       "alt": "VivaOMovimentoCustomic2022"
+    },
+    {
+      "type": "custom-html",
+      "html": "<div role=\"main\" id=\"b2c-newsletter-site-28eb1cb7f1fd2326ac39\"></div><script type=\"text/javascript\" src=\"https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js\"></script><script type=\"text/javascript\"> new RDStationForms('b2c-newsletter-site-28eb1cb7f1fd2326ac39', 'UA-28628232-1').createForm();</script>"
     }
   ]
 }
